@@ -1,13 +1,11 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
-  OnCreate = DataModuleCreate
   Height = 543
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
     VendorHome = 
       'C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu' +
       '\delphi\Win32\Debug\dll'
-    OnDriverCreated = FDPhysPgDriverLink1DriverCreated
     Left = 32
     Top = 32
   end

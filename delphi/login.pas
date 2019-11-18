@@ -18,6 +18,7 @@ type
     lblTitulo: TLabel;
     procedure edtLoginChange(Sender: TObject);
     procedure edtSenhaChange(Sender: TObject);
+    procedure btnLogarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,6 +31,16 @@ var
 implementation
 
 {$R *.dfm}
+
+uses home;
+
+procedure TForm1.btnLogarClick(Sender: TObject);
+begin
+         Principal := TPrincipal.Create(self);
+         Principal.ShowModal;
+         Form1.Close;
+
+end;
 
 procedure TForm1.edtLoginChange(Sender: TObject);
 begin

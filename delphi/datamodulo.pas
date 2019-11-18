@@ -122,8 +122,6 @@ type
     FDQVideoid: TIntegerField;
     FDQVideotx_link: TWideStringField;
     FDQVideocd_item: TIntegerField;
-    procedure FDPhysPgDriverLink1DriverCreated(Sender: TObject);
-    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public

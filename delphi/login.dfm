@@ -1603,5 +1603,6 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    OnClick = btnLogarClick
   end
 end

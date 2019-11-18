@@ -3,7 +3,8 @@ program museu;
 uses
   Vcl.Forms,
   login in 'login.pas' {Form1},
-  datamodulo in 'datamodulo.pas' {DataModule1: TDataModule};
+  datamodulo in 'datamodulo.pas' {DataModule1},
+  home in 'home.pas' {Principal};
 
 {$R *.res}
 
@@ -12,5 +13,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TPrincipal, Principal);
   Application.Run;
 end.
