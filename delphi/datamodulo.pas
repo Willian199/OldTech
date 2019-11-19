@@ -14,7 +14,6 @@ type
   TDataModule1 = class(TDataModule)
     FDPhysPgDriverLink1: TFDPhysPgDriverLink;
     FDConnection1: TFDConnection;
-    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDQBairro: TFDQuery;
     DSBairro: TDataSource;
     DSCidade: TDataSource;

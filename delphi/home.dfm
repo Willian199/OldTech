@@ -12,6 +12,7 @@ object Principal: TPrincipal
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
+  Position = poDesigned
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -31,6 +32,7 @@ object Principal: TPrincipal
         Caption = 'Item'
         object Peca: TMenuItem
           Caption = 'Pe'#231'a'
+          OnClick = PecaClick
         end
         object Colecao: TMenuItem
           Caption = 'Cole'#231#227'o'

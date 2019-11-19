@@ -1,0 +1,48 @@
+unit ListaItem;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ComCtrls;
+
+type
+  TItem = class(TForm)
+    PageControl1: TPageControl;
+    Consulta: TTabSheet;
+    Cadastro: TTabSheet;
+    DBGrid1: TDBGrid;
+    Edit1: TEdit;
+    Label1: TLabel;
+    DataSource1: TDataSource;
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  CadastroItem: TItem;
+
+implementation
+
+{$R *.dfm}
+
+uses datamodulo;
+
+procedure TItem.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  DataModule1.FDConnection1.Connected:= False;
+  DataModule1.FDQItem.Active:= False;
+end;
+
+procedure TItem.FormShow(Sender: TObject);
+begin
+  DataModule1.FDConnection1.Connected:= True;
+  DataModule1.FDQItem.Active:= True;
+end;
+
+end.

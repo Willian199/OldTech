@@ -20,11 +20,6 @@ object DataModule1: TDataModule1
     Left = 104
     Top = 32
   end
-  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
-    Provider = 'Forms'
-    Left = 152
-    Top = 32
-  end
   object FDQBairro: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (

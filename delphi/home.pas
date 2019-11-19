@@ -25,6 +25,7 @@ type
     Sobre: TMenuItem;
     Sair: TMenuItem;
     Panel1: TPanel;
+    procedure PecaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,5 +38,13 @@ var
 implementation
 
 {$R *.dfm}
+
+uses ListaItem, datamodulo;
+
+procedure TPrincipal.PecaClick(Sender: TObject);
+begin
+  CadastroItem:= TItem.Create(Self);
+  CadastroItem.ShowModal;
+end;
 
 end.
