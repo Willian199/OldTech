@@ -1560,6 +1560,14 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
+  object lblqtd: TLabel
+    Left = 456
+    Top = 32
+    Width = 32
+    Height = 14
+    Caption = 'count'
+    Visible = False
+  end
   object edtLogin: TEdit
     Left = 224
     Top = 189
@@ -1604,5 +1612,24 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 2
     OnClick = btnLogarClick
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQUsuario
+    ScopeMappings = <>
+    Left = 88
+    Top = 8
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkPropertyToFieldCaption: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'count'
+      Component = lblqtd
+      ComponentProperty = 'Caption'
+    end
   end
 end

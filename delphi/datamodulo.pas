@@ -113,14 +113,10 @@ type
     FDQTipoMaterialtx_material: TWideStringField;
     FDQTipoPessoaid: TIntegerField;
     FDQTipoPessoatipo: TWideStringField;
-    FDQUsuarioid: TIntegerField;
-    FDQUsuariotx_login: TWideStringField;
-    FDQUsuariotx_senha: TWideStringField;
-    FDQUsuariofl_ativo: TBooleanField;
-    FDQUsuariocd_pessoa: TIntegerField;
     FDQVideoid: TIntegerField;
     FDQVideotx_link: TWideStringField;
     FDQVideocd_item: TIntegerField;
+    FDQUsuariocount: TLargeintField;
   private
     { Private declarations }
   public

@@ -124,12 +124,6 @@ Coordinates=796,105,125,33
 [DSPais]
 Coordinates=345,373,49,33
 
-[FDQUsuariofl_ativo]
-Coordinates=796,157,110,33
-
-[FDQUsuarioid]
-Coordinates=614,1127,83,33
-
 [FDQEstadoid]
 Coordinates=614,1179,79,33
 
@@ -180,9 +174,6 @@ Coordinates=796,729,112,33
 
 [FDQColecaoid]
 Coordinates=595,1218,85,33
-
-[FDQUsuariotx_login]
-Coordinates=796,781,113,33
 
 [FDQEnderecocd_bairro]
 Coordinates=796,833,129,33
@@ -259,9 +250,6 @@ Coordinates=706,10,75,105
 [FDQFabricante]
 Coordinates=160,359,88,105
 
-[FDQUsuariotx_senha]
-Coordinates=796,1197,119,33
-
 [FDQItemid]
 Coordinates=796,1249,66,33
 
@@ -304,9 +292,6 @@ Coordinates=986,417,114,33
 [FDQMuseu]
 Coordinates=276,10,72,141
 
-[FDQUsuariocd_pessoa]
-Coordinates=986,469,127,33
-
 [FDQPaistx_nome]
 Coordinates=986,521,99,33
 
@@ -326,5 +311,5 @@ Coordinates=986,677,132,33
 Coordinates=791,10,70,105
 
 []
-Coordinates=796,1145,113,33
+Coordinates=986,469,127,33
 

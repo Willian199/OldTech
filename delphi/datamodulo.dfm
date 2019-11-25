@@ -3,9 +3,7 @@ object DataModule1: TDataModule1
   Height = 543
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
-    VendorHome = 
-      'C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu' +
-      '\delphi\Win32\Debug\dll'
+    VendorHome = 'C:\Users\310725\Desktop\projetoMuseu\delphi\Win32\Debug\dll'
     Left = 32
     Top = 32
   end
@@ -502,29 +500,14 @@ object DataModule1: TDataModule1
   object FDQUsuario: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'select * from usuario')
+      'Select count(*) from usuario')
     Left = 251
     Top = 496
-    object FDQUsuarioid: TIntegerField
-      FieldName = 'id'
-      Origin = 'id'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-    end
-    object FDQUsuariotx_login: TWideStringField
-      FieldName = 'tx_login'
-      Origin = 'tx_login'
-    end
-    object FDQUsuariotx_senha: TWideStringField
-      FieldName = 'tx_senha'
-      Origin = 'tx_senha'
-    end
-    object FDQUsuariofl_ativo: TBooleanField
-      FieldName = 'fl_ativo'
-      Origin = 'fl_ativo'
-    end
-    object FDQUsuariocd_pessoa: TIntegerField
-      FieldName = 'cd_pessoa'
-      Origin = 'cd_pessoa'
+    object FDQUsuariocount: TLargeintField
+      AutoGenerateValue = arDefault
+      FieldName = 'count'
+      Origin = 'count'
+      ReadOnly = True
     end
   end
   object FDQTipoPessoa: TFDQuery

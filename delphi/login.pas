@@ -5,7 +5,9 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.pngimage,
-  Vcl.ExtCtrls, Vcl.Imaging.jpeg;
+  Vcl.ExtCtrls, Vcl.Imaging.jpeg, Data.Bind.EngExt, Vcl.Bind.DBEngExt,
+  System.Rtti, System.Bindings.Outputs, Vcl.Bind.Editors, Data.Bind.Components,
+  Data.Bind.DBScope;
 
 type
   TForm1 = class(TForm)
@@ -16,6 +18,10 @@ type
     lblLogin: TLabel;
     lblSenha: TLabel;
     lblTitulo: TLabel;
+    lblqtd: TLabel;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkPropertyToFieldCaption: TLinkPropertyToField;
     procedure edtLoginChange(Sender: TObject);
     procedure edtSenhaChange(Sender: TObject);
     procedure btnLogarClick(Sender: TObject);
@@ -32,13 +38,34 @@ implementation
 
 {$R *.dfm}
 
-uses home;
+uses home, datamodulo;
 
 procedure TForm1.btnLogarClick(Sender: TObject);
 begin
-         Principal := TPrincipal.Create(self);
-         Principal.ShowModal;
-         Form1.Close;
+
+    DataModule1.FDQUsuario.SQL.Clear;
+    DataModule1.FDQUsuario.SQL.Add
+      ('Select count(*) from usuario where tx_login =:pLogin AND tx_senha =:pSenha');
+    DataModule1.FDQUsuario.ParamByName('pLogin').AsString := edtLogin.Text;
+    DataModule1.FDQUsuario.ParamByName('pSenha').AsString := edtSenha.Text;
+    DataModule1.FDQUsuario.Open;
+
+
+    if (lblqtd.Caption = '1') then
+    begin
+      showmessage('Login efetuado');
+      //Modulo.usuario := edtLogin.Text;
+      Principal := TPrincipal.Create(self);
+      Principal.ShowModal;
+      Form1.Close;
+    end
+    else
+    begin
+      showmessage('Usuário ou senha inválidos');
+      edtLogin.Clear;
+      edtSenha.Clear;
+      edtLogin.SetFocus;
+    end;
 
 end;
 
