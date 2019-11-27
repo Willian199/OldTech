@@ -1,7 +1,7 @@
 object cadastroUsuario: TcadastroUsuario
   Left = 0
   Top = 0
-  Caption = 'cadastroUsuario'
+  Caption = 'Usuario'
   ClientHeight = 433
   ClientWidth = 577
   Color = clBtnFace

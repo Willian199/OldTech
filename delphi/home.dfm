@@ -48,6 +48,7 @@ object Principal: TPrincipal
         Caption = 'Pessoa'
         object cadastroPessoa: TMenuItem
           Caption = 'Pessoa'
+          OnClick = cadastroPessoaClick
         end
         object Usuario: TMenuItem
           Caption = 'Usuario'

@@ -1,0 +1,107 @@
+object cadastroUsuario: TcadastroUsuario
+  Left = 0
+  Top = 0
+  Caption = 'cadastroUsuario'
+  ClientHeight = 433
+  ClientWidth = 577
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblCodigo: TLabel
+    Left = 40
+    Top = 32
+    Width = 37
+    Height = 13
+    Caption = 'C'#243'digo:'
+  end
+  object lblLogin: TLabel
+    Left = 40
+    Top = 80
+    Width = 29
+    Height = 13
+    Caption = 'Login:'
+  end
+  object lblSenha: TLabel
+    Left = 328
+    Top = 80
+    Width = 34
+    Height = 13
+    Caption = 'Senha:'
+  end
+  object lblListaUsuarios: TLabel
+    Left = 40
+    Top = 176
+    Width = 45
+    Height = 13
+    Caption = 'Usu'#225'rios:'
+  end
+  object lblConfirmarSenha: TLabel
+    Left = 279
+    Top = 120
+    Width = 83
+    Height = 13
+    Caption = 'Confirmar senha:'
+  end
+  object edtCodigo: TEdit
+    Left = 104
+    Top = 29
+    Width = 65
+    Height = 21
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 104
+    Top = 176
+    Width = 320
+    Height = 120
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object edtLogin: TEdit
+    Left = 104
+    Top = 77
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object edtSenha: TEdit
+    Left = 384
+    Top = 77
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object Edit1: TEdit
+    Left = 384
+    Top = 117
+    Width = 121
+    Height = 21
+    TabOrder = 4
+  end
+  object ckbAtivo: TCheckBox
+    Left = 40
+    Top = 119
+    Width = 97
+    Height = 17
+    Caption = 'Ativo'
+    TabOrder = 5
+  end
+  object cbPessoa: TComboBox
+    Left = 360
+    Top = 24
+    Width = 145
+    Height = 21
+    TabOrder = 6
+    Text = 'Pessoa'
+  end
+end

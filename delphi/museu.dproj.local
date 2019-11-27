@@ -3,21 +3,24 @@
 	<Transactions>
     <Transaction>2019/09/30 21:31:31.000.897,=C:\Users\310725\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2019/11/11 19:44:48.000.404,=C:\Users\310725\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2019/11/11 19:45:44.000.849,C:\Users\310725\Desktop\projetoMuseu\delphi\login.pas=C:\Users\310725\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2019/11/11 19:45:44.000.849,C:\Users\310725\Desktop\projetoMuseu\delphi\login.dfm=C:\Users\310725\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2019/11/11 19:46:02.000.730,C:\Users\310725\Desktop\projetoMuseu\delphi\museu.dproj=C:\Users\310725\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2019/11/11 19:45:44.000.849,C:\Users\310725\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\310725\Desktop\projetoMuseu\delphi\login.dfm</Transaction>
+    <Transaction>2019/11/11 19:45:44.000.849,C:\Users\310725\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\310725\Desktop\projetoMuseu\delphi\login.pas</Transaction>
+    <Transaction>2019/11/11 19:46:02.000.730,C:\Users\310725\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\310725\Desktop\projetoMuseu\delphi\museu.dproj</Transaction>
     <Transaction>2019/11/18 19:35:17.000.105,=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit1.pas</Transaction>
-    <Transaction>2019/11/18 19:35:34.000.479,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit1.dfm=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\datamodulo.dfm</Transaction>
-    <Transaction>2019/11/18 19:35:34.000.479,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit1.pas=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\datamodulo.pas</Transaction>
+    <Transaction>2019/11/18 19:35:34.000.479,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\datamodulo.dfm=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit1.dfm</Transaction>
+    <Transaction>2019/11/18 19:35:34.000.479,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\datamodulo.pas=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit1.pas</Transaction>
     <Transaction>2019/11/18 20:10:33.000.487,=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.pas</Transaction>
     <Transaction>2019/11/18 20:19:05.000.120,=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.pas</Transaction>
-    <Transaction>2019/11/18 20:19:59.000.502,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\home.dfm=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.dfm</Transaction>
-    <Transaction>2019/11/18 20:19:59.000.502,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\home.pas=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.pas</Transaction>
+    <Transaction>2019/11/18 20:19:59.000.502,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.dfm=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\home.dfm</Transaction>
+    <Transaction>2019/11/18 20:19:59.000.502,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.pas=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\home.pas</Transaction>
     <Transaction>2019/11/18 21:13:52.000.581,=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.pas</Transaction>
-    <Transaction>2019/11/18 21:17:55.000.476,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\ListaItem.pas=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.pas</Transaction>
-    <Transaction>2019/11/18 21:17:55.000.476,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\ListaItem.dfm=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.dfm</Transaction>
+    <Transaction>2019/11/18 21:17:55.000.476,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.pas=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\ListaItem.pas</Transaction>
+    <Transaction>2019/11/18 21:17:55.000.476,C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\Unit2.dfm=C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu\delphi\ListaItem.dfm</Transaction>
     <Transaction>2019/11/25 20:11:41.000.432,=C:\Users\310725\Desktop\projetoMuseu\delphi\Unit2.pas</Transaction>
-    <Transaction>2019/11/25 20:29:45.000.893,C:\Users\310725\Desktop\projetoMuseu\delphi\Unit2.pas=C:\Users\310725\Desktop\projetoMuseu\delphi\Usuario.pas</Transaction>
-    <Transaction>2019/11/25 20:29:45.000.893,C:\Users\310725\Desktop\projetoMuseu\delphi\Unit2.dfm=C:\Users\310725\Desktop\projetoMuseu\delphi\Usuario.dfm</Transaction>
+    <Transaction>2019/11/25 20:29:45.000.893,C:\Users\310725\Desktop\projetoMuseu\delphi\Usuario.pas=C:\Users\310725\Desktop\projetoMuseu\delphi\Unit2.pas</Transaction>
+    <Transaction>2019/11/25 20:29:45.000.893,C:\Users\310725\Desktop\projetoMuseu\delphi\Usuario.dfm=C:\Users\310725\Desktop\projetoMuseu\delphi\Unit2.dfm</Transaction>
+    <Transaction>2019/11/27 19:42:51.000.175,=C:\Users\310725\Desktop\projetoMuseu\delphi\Unit2.pas</Transaction>
+    <Transaction>2019/11/27 19:46:06.000.098,C:\Users\310725\Desktop\projetoMuseu\delphi\Unit2.pas=C:\Users\310725\Desktop\projetoMuseu\delphi\Pessoa.pas</Transaction>
+    <Transaction>2019/11/27 19:46:06.000.098,C:\Users\310725\Desktop\projetoMuseu\delphi\Unit2.dfm=C:\Users\310725\Desktop\projetoMuseu\delphi\Pessoa.dfm</Transaction>
   </Transactions>
 </BorlandProject>
