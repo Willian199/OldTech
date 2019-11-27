@@ -8,7 +8,7 @@ uses
   Vcl.DBGrids;
 
 type
-  TForm2 = class(TForm)
+  TcadastroUsuario = class(TForm)
     lblCodigo: TLabel;
     edtCodigo: TEdit;
     lblLogin: TLabel;
@@ -28,7 +28,7 @@ type
   end;
 
 var
-  Form2: TForm2;
+  cadastroUsuario: TcadastroUsuario;
 
 implementation
 

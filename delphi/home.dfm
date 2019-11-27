@@ -51,6 +51,7 @@ object Principal: TPrincipal
         end
         object Usuario: TMenuItem
           Caption = 'Usuario'
+          OnClick = UsuarioClick
         end
       end
     end

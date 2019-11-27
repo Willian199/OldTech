@@ -1,7 +1,7 @@
-object Form2: TForm2
+object cadastroUsuario: TcadastroUsuario
   Left = 0
   Top = 0
-  Caption = 'Form2'
+  Caption = 'cadastroUsuario'
   ClientHeight = 433
   ClientWidth = 577
   Color = clBtnFace
