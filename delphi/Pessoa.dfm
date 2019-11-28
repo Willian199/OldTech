@@ -61,6 +61,7 @@ object administrarPessoa: TadministrarPessoa
     Width = 65
     Height = 21
     TabOrder = 0
+    Text = '1'
     Visible = False
   end
   object edtNome: TEdit
@@ -69,6 +70,7 @@ object administrarPessoa: TadministrarPessoa
     Width = 233
     Height = 21
     TabOrder = 1
+    Text = 'Luiz Fernando Coppini de Lima'
   end
   object edtCpf: TMaskEdit
     Left = 96
@@ -78,15 +80,14 @@ object administrarPessoa: TadministrarPessoa
     EditMask = '!999-999-999-99;1;_'
     MaxLength = 14
     TabOrder = 2
-    Text = '   -   -   -  '
+    Text = '88.-   -   -  '
   end
   object dtpNascimento: TDateTimePicker
     Left = 491
     Top = 80
     Width = 108
     Height = 21
-    Date = 43796.000000000000000000
-    Time = 0.830367951391963300
+    Date = 35542.000000000000000000
     TabOrder = 3
   end
   object edtTelefone: TMaskEdit
@@ -104,16 +105,22 @@ object administrarPessoa: TadministrarPessoa
     Top = 192
     Width = 145
     Height = 21
+    ItemIndex = 0
     TabOrder = 5
-    Text = 'Tipo Pessoa'
+    Text = 'Funcionario'
+    Items.Strings = (
+      'Funcionario')
   end
   object cbComplemento: TComboBox
     Left = 454
     Top = 192
     Width = 145
     Height = 21
+    ItemIndex = 0
     TabOrder = 6
-    Text = 'Complemento'
+    Text = '1'
+    Items.Strings = (
+      '1')
   end
   object dbPessoa: TDBGrid
     Left = 44
@@ -127,6 +134,42 @@ object administrarPessoa: TadministrarPessoa
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_nome'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_cpf'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'dt_nascimento'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_telefone'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'cd_tipopessoa'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'cd_complemento'
+        Visible = True
+      end>
   end
   object btnNovo: TButton
     Left = 102
@@ -231,6 +274,7 @@ object administrarPessoa: TadministrarPessoa
       Track = True
       FillDataSource = BindSourceDB3
       FillValueFieldName = 'id'
+      FillDisplayFieldName = 'id'
       AutoFill = True
       FillExpressions = <>
       FillHeaderExpressions = <>
