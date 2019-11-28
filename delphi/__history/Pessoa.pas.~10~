@@ -36,10 +36,6 @@ type
     LinkControlToField3: TLinkControlToField;
     LinkControlToField4: TLinkControlToField;
     LinkControlToField5: TLinkControlToField;
-    LinkFillControlToField1: TLinkFillControlToField;
-    LinkFillControlToField2: TLinkFillControlToField;
-    BindSourceDB2: TBindSourceDB;
-    BindSourceDB3: TBindSourceDB;
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }

@@ -240,13 +240,13 @@ object administrarPessoa: TadministrarPessoa
   object BindSourceDB2: TBindSourceDB
     DataSet = DataModule1.FDQTipoPessoa
     ScopeMappings = <>
-    Left = 480
-    Top = 8
+    Left = 344
+    Top = 280
   end
   object BindSourceDB3: TBindSourceDB
     DataSet = DataModule1.FDQEndereco
     ScopeMappings = <>
-    Left = 552
-    Top = 8
+    Left = 352
+    Top = 288
   end
 end

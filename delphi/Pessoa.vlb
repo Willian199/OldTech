@@ -1,172 +1,180 @@
 ﻿[lblNome]
-Coordinates=20,740,62,58
+Coordinates=20,740,54,51
 
 [cbComplemento]
-Coordinates=1090,430,108,124
+Coordinates=1090,450,95,105
 
 [lblTelefone]
-Coordinates=310,680,78,58
+Coordinates=310,680,68,51
 
 [lblNascimento]
-Coordinates=10,676,96,58
+Coordinates=10,676,84,51
 
 [dbPessoa]
-Coordinates=530,510,71,36
+Coordinates=530,510,62,33
 
 [lblCpf]
-Coordinates=130,680,49,58
+Coordinates=130,680,43,51
 
 [edtNome]
-Coordinates=530,210,66,58
+Coordinates=530,210,58,51
 
 [cbTipoPessoa]
-Coordinates=920,440,101,124
+Coordinates=660,520,84,105
 
 [edtCodigo]
-Coordinates=980,330,73,58
+Coordinates=980,330,65,51
 
 [edtTelefone]
-Coordinates=380,280,83,58
+Coordinates=380,280,72,51
 
 [lblListaPessoa]
-Coordinates=200,680,98,58
+Coordinates=200,680,86,51
 
 [lblCodigo]
-Coordinates=90,740,68,58
+Coordinates=90,740,61,51
 
 [dtpNascimento]
-Coordinates=950,210,100,58
+Coordinates=950,210,88,51
 
 [edtCpf]
-Coordinates=490,360,52,58
+Coordinates=490,360,46,51
 
 [DataModule1.DSUsuario2]
-Coordinates=339,889,164,36
+Coordinates=339,889,139,33
 
 [DataModule1.DSEstado]
-Coordinates=180,889,152,36
+Coordinates=180,889,129,33
 
 [DataModule1.DSSetor]
-Coordinates=891,837,143,36
+Coordinates=891,837,121,33
 
 [DataModule1.DSPais]
-Coordinates=680,166,137,36
+Coordinates=680,166,116,33
 
 [DataModule1.DSUsuario]
-Coordinates=1121,353,157,36
+Coordinates=1121,353,133,33
 
 [DataModule1.FDQPais]
-Coordinates=10,564,146,102
+Coordinates=10,564,124,87
 
 [btnEditar]
-Coordinates=1398,720,66,58
+Coordinates=1398,720,59,51
 
 [btnExcluir]
-Coordinates=1239,720,71,58
+Coordinates=1239,720,64,51
 
 [btnNovo]
-Coordinates=1470,720,62,58
+Coordinates=1470,720,56,51
 
 [DataModule1.FDQUsuario]
-Coordinates=170,300,166,80
+Coordinates=170,300,141,69
 
 [DataModule1.FDQColecao]
-Coordinates=1026,10,168,146
+Coordinates=1026,10,143,123
 
 [DataModule1.DSTipoMaterial]
-Coordinates=46,1318,183,36
+Coordinates=46,1318,156,33
 
 [DataModule1.DSItemColecao]
-Coordinates=891,1145,184,36
+Coordinates=891,1145,156,33
 
 [DataModule1.FDQSetor]
-Coordinates=510,10,152,168
+Coordinates=510,10,129,141
 
 [DataModule1.FDQEndereco]
-Coordinates=1204,10,176,146
+Coordinates=1260,430,149,33
+Visible=False
 
 [DataModule1.FDQBairro]
-Coordinates=187,430,156,124
+Coordinates=187,430,133,105
 
 [DataModule1.FDQItem]
-Coordinates=10,10,146,410
+Coordinates=10,10,124,339
 
 [DataModule1.DSVideo]
-Coordinates=31,889,145,36
+Coordinates=31,889,123,33
 
 [DataModule1.FDQImagem]
-Coordinates=10,430,167,124
+Coordinates=10,430,141,105
 
 [DataModule1.DSItem]
-Coordinates=508,870,137,36
+Coordinates=508,870,116,33
 
 [DataModule1.DSImagem]
-Coordinates=475,166,158,36
+Coordinates=475,166,134,33
 
 [DataModule1.FDQMuseu]
-Coordinates=340,10,160,168
+Coordinates=340,10,135,141
 
 [DataModule1.FDQVideo]
-Coordinates=1400,20,154,124
+Coordinates=1400,20,131,105
 
 [DataModule1.DSPessoa]
-Coordinates=475,309,155,36
+Coordinates=475,309,131,33
 
 [DataModule1.FDQTipoPessoa]
-Coordinates=1380,160,189,102
+Coordinates=590,680,160,33
+Visible=False
 
 [DataModule1.DSTipoPessoa]
-Coordinates=891,386,180,36
+Coordinates=891,386,153,33
 
 [DataModule1.DSMuseu]
-Coordinates=680,287,150,36
+Coordinates=680,287,128,33
 
 [DataModule1.DSBairro]
-Coordinates=891,1266,147,36
+Coordinates=891,1266,125,33
 
 [DataModule1.FDQFabricante]
-Coordinates=160,10,182,124
+Coordinates=160,10,155,105
 
 [DataModule1.FDQCidade]
-Coordinates=170,150,162,124
+Coordinates=170,150,137,105
 
 [btnSalvar]
-Coordinates=1320,720,69,58
+Coordinates=1320,720,61,51
 
 [DataModule1.FDQTipoMaterial]
-Coordinates=1380,290,192,102
+Coordinates=1380,290,163,87
 
 [DataModule1.DSEndereco]
-Coordinates=475,1,167,36
+Coordinates=475,1,142,33
 
 [DataModule1.DSCidade]
-Coordinates=573,1318,153,36
+Coordinates=573,1318,129,33
 
 [DataModule1.FDQUsuario2]
-Coordinates=670,10,173,168
+Coordinates=670,10,147,141
 
 [DataModule1.DSColecao]
-Coordinates=147,688,159,36
+Coordinates=147,688,135,33
 
 [DataModule1.FDQEstado]
-Coordinates=855,10,161,146
+Coordinates=855,10,137,123
 
 [DataModule1.DSFabricante]
-Coordinates=680,474,173,36
+Coordinates=680,474,147,33
 
 [DataModule1.FDQItemColecao]
-Coordinates=166,564,193,102
+Coordinates=166,564,164,87
 
 [DataModule1.FDQPessoa]
-Coordinates=670,200,164,36
+Coordinates=670,200,139,33
 Visible=False
 
 []
 Coordinates=1122,452,91,36
 
 [BindSourceDB1]
-Coordinates=670,200,151,234
+Coordinates=670,200,126,195
 
 [BindingsList1]
-Coordinates=175,1,91,36
+Coordinates=175,1,82,33
+
+[BindSourceDB2]
+Coordinates=820,530,146,105
+
+[BindSourceDB3]
+Coordinates=1260,430,136,141
 
