@@ -55,17 +55,44 @@ object cadastroUsuario: TcadastroUsuario
     Height = 21
     TabOrder = 0
   end
-  object DBGrid1: TDBGrid
-    Left = 104
-    Top = 176
-    Width = 320
+  object dbUsuario: TDBGrid
+    Left = 40
+    Top = 195
+    Width = 457
     Height = 120
+    DataSource = DataModule1.DSUsuario2
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_login'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_senha'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'fl_ativo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'cd_pessoa'
+        Visible = True
+      end>
   end
   object edtLogin: TEdit
     Left = 104
@@ -79,6 +106,7 @@ object cadastroUsuario: TcadastroUsuario
     Top = 77
     Width = 121
     Height = 21
+    HelpType = htKeyword
     TabOrder = 3
   end
   object Edit1: TEdit
@@ -86,6 +114,7 @@ object cadastroUsuario: TcadastroUsuario
     Top = 117
     Width = 121
     Height = 21
+    HelpType = htKeyword
     TabOrder = 4
   end
   object ckbAtivo: TCheckBox
@@ -103,5 +132,100 @@ object cadastroUsuario: TcadastroUsuario
     Height = 21
     TabOrder = 6
     Text = 'Pessoa'
+  end
+  object btnNovo: TButton
+    Left = 62
+    Top = 368
+    Width = 83
+    Height = 41
+    Caption = 'Novo'
+    TabOrder = 7
+  end
+  object btnSalvar: TButton
+    Left = 185
+    Top = 368
+    Width = 80
+    Height = 41
+    Caption = 'Salvar'
+    Enabled = False
+    TabOrder = 8
+  end
+  object btnEditar: TButton
+    Left = 303
+    Top = 368
+    Width = 82
+    Height = 41
+    Caption = 'Editar'
+    Enabled = False
+    TabOrder = 9
+  end
+  object btnExcluir: TButton
+    Left = 424
+    Top = 368
+    Width = 81
+    Height = 41
+    Caption = 'Excluir'
+    Enabled = False
+    TabOrder = 10
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQUsuario2
+    ScopeMappings = <>
+    Left = 528
+    Top = 88
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 524
+    Top = 21
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'id'
+      Control = edtCodigo
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_login'
+      Control = edtLogin
+      Track = True
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_senha'
+      Control = edtSenha
+      Track = True
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'fl_ativo'
+      Control = ckbAtivo
+      Track = True
+    end
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'cd_pessoa'
+      Control = cbPessoa
+      Track = True
+      FillDataSource = BindSourceDB2
+      FillValueFieldName = 'cd_tipopessoa'
+      FillDisplayFieldName = 'tx_nome'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModule1.FDQPessoa
+    ScopeMappings = <>
+    Left = 528
+    Top = 152
   end
 end

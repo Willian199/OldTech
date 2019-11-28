@@ -2,8 +2,8 @@ object administrarPessoa: TadministrarPessoa
   Left = 0
   Top = 0
   Caption = 'Pessoa'
-  ClientHeight = 428
-  ClientWidth = 698
+  ClientHeight = 545
+  ClientWidth = 707
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -108,23 +108,106 @@ object administrarPessoa: TadministrarPessoa
     Text = 'Tipo Pessoa'
   end
   object cbComplemento: TComboBox
-    Left = 303
+    Left = 454
     Top = 192
     Width = 145
     Height = 21
     TabOrder = 6
     Text = 'Complemento'
   end
-  object DBGrid1: TDBGrid
+  object dbPessoa: TDBGrid
     Left = 44
     Top = 288
     Width = 555
     Height = 120
+    DataSource = DataModule1.DSPessoa
     TabOrder = 7
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object btnNovo: TButton
+    Left = 102
+    Top = 456
+    Width = 83
+    Height = 41
+    Caption = 'Novo'
+    TabOrder = 8
+  end
+  object btnSalvar: TButton
+    Left = 225
+    Top = 456
+    Width = 80
+    Height = 41
+    Caption = 'Salvar'
+    Enabled = False
+    TabOrder = 9
+  end
+  object btnEditar: TButton
+    Left = 343
+    Top = 456
+    Width = 82
+    Height = 41
+    Caption = 'Editar'
+    Enabled = False
+    TabOrder = 10
+  end
+  object btnExcluir: TButton
+    Left = 464
+    Top = 456
+    Width = 81
+    Height = 41
+    Caption = 'Excluir'
+    Enabled = False
+    TabOrder = 11
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQPessoa
+    ScopeMappings = <>
+    Left = 560
+    Top = 16
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 492
+    Top = 13
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_nome'
+      Control = edtNome
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_telefone'
+      Control = edtTelefone
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_cpf'
+      Control = edtCpf
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'dt_nascimento'
+      Control = dtpNascimento
+      Track = True
+    end
+    object LinkControlToField5: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'id'
+      Control = edtCodigo
+      Track = True
+    end
   end
 end
