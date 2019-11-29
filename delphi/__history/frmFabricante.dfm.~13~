@@ -82,20 +82,4 @@ object Fabricante: TFabricante
     Caption = 'Salvar'
     TabOrder = 3
   end
-  object btnEditar: TBitBtn
-    Left = 240
-    Top = 296
-    Width = 75
-    Height = 25
-    Caption = 'Editar'
-    TabOrder = 4
-  end
-  object BitBtn1: TBitBtn
-    Left = 414
-    Top = 296
-    Width = 75
-    Height = 25
-    Caption = 'Excluir'
-    TabOrder = 5
-  end
 end
