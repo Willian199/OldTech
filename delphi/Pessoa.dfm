@@ -63,7 +63,6 @@ object administrarPessoa: TadministrarPessoa
     Enabled = False
     TabOrder = 0
     Text = '1'
-    Visible = False
   end
   object edtNome: TEdit
     Left = 96
