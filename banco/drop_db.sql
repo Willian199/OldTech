@@ -1,62 +1,65 @@
 alter table
-	video drop constraint video_item_fk;
+	Visitante drop constraint FKVisitante776277;
 
 alter table
-	item drop constraint item_dono_fk;
+	video drop constraint FKvideo893307;
 
 alter table
-	item_colecao drop constraint item_colecao_item_fk;
+	item drop constraint FKitem150895;
 
 alter table
-	item_colecao drop constraint item_colecao_colecao_fk;
+	item_colecao drop constraint FKitem_colec189670;
 
 alter table
-	item drop constraint item_material_fk;
+	item_colecao drop constraint FKitem_colec969352;
 
 alter table
-	museu drop constraint museu_endereco_fk;
+	item drop constraint FKitem762432;
 
 alter table
-	item drop constraint item_fabricante_fk;
+	museu drop constraint FKmuseu165157;
 
 alter table
-	endereco drop constraint endereco_bairro_fk;
+	item drop constraint FKitem235442;
 
 alter table
-	pessoa drop constraint pessoa_complemento_fk;
+	endereco drop constraint FKendereco343795;
 
 alter table
-	imagem drop constraint imagem_item_fk;
+	pessoa drop constraint FKpessoa916393;
 
 alter table
-	colecao drop constraint colecao_setor_fk;
+	imagem drop constraint FKimagem561566;
 
 alter table
-	item drop constraint item_setor_fk;
+	colecao drop constraint FKcolecao717444;
 
 alter table
-	setor drop constraint setor_museu_fk;
+	item drop constraint FKitem709999;
 
 alter table
-	item drop constraint item_pais_fk;
+	setor drop constraint FKsetor755313;
 
 alter table
-	estado drop constraint estado_pais_fk;
+	item drop constraint FKitem313911;
 
 alter table
-	item drop constraint item_responsavel_fk;
+	estado drop constraint FKestado596102;
 
 alter table
-	pessoa drop constraint pessoa_tipo_pessoa_fk;
+	item drop constraint FKitem223997;
 
 alter table
-	usuario drop constraint usuario_pessoa_fk;
+	pessoa drop constraint FKpessoa206129;
 
 alter table
-	bairro drop constraint barro_cidade_fk;
+	usuario drop constraint FKusuario265371;
 
 alter table
-	cidade drop constraint cidade_estado_fk;
+	bairro drop constraint FKbairro278341;
+
+alter table
+	cidade drop constraint FKcidade486232;
 
 drop table
 	if exists bairro cascade;
@@ -108,3 +111,6 @@ drop table
 
 drop table
 	if exists video cascade;
+
+drop table
+	if exists Visitante cascade;

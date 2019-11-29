@@ -34,7 +34,8 @@ create table
 	tx_rua varchar(60) not null,
 	tx_numeroRua numeric(5,
 	0),
-	cd_bairro int4 not null,
+	cd_bairo int4 not null,
+	bairroid int4,
 	primary key (id));
 
 comment on
@@ -76,13 +77,12 @@ create table
 	tx_nome varchar(50) not null,
 	tx_origem varchar(20) not null,
 	tx_descricao varchar(255),
-	dt_construido date,
 	tp_exposicao timestamp(12),
-	tp_manutencao timestamp(12),
 	dt_fabricacao date,
 	vl_valor numeric(19,
 	3),
-	fl_exibicao bool default 'false' not null,
+	fl_manutencao bool default 'false' not null,
+	dt_cadastro date,
 	cd_responsavel int4,
 	cd_pais int4,
 	cd_setor int4 not null,
@@ -101,13 +101,7 @@ comment on
 column item.tx_descricao is 'Descrição do item';
 
 comment on
-column item.dt_construido is 'Data em que foi construido';
-
-comment on
 column item.tp_exposicao is 'Tempo em que o item pode ficar em manutenção';
-
-comment on
-column item.tp_manutencao is 'Tempo em que o item precisa ficar em manutenção';
 
 comment on
 column item.dt_fabricacao is 'Data em que foi fabricado';
@@ -116,7 +110,10 @@ comment on
 column item.vl_valor is 'Valor do item';
 
 comment on
-column item.fl_exibicao is 'Flag para validar se o item está em exibição';
+column item.fl_manutencao is 'Flag para validar se o item está em exibição';
+
+comment on
+column item.dt_cadastro is 'Data de cadastro do item';
 
 create table
 	item_colecao (cd_item int4 not null,
@@ -155,6 +152,7 @@ create table
 	tx_cpf varchar(12) not null unique,
 	dt_nascimento date not null,
 	tx_telefone varchar(11),
+	tx_sexo char(1),
 	cd_tipoPessoa int4 not null,
 	cd_complemento int4 not null,
 	primary key (id));
@@ -170,6 +168,9 @@ column pessoa.dt_nascimento is 'Data de nascimento';
 
 comment on
 column pessoa.tx_telefone is 'Telefone da pessoa';
+
+comment on
+column pessoa.tx_sexo is 'Flag para o sexo da pessoa F ou M';
 
 create table
 	setor (id serial not null,
@@ -232,62 +233,74 @@ create table
 comment on
 column video.tx_link is 'Link do video';
 
-alter table
-	video add constraint video_item_fk foreign key (cd_item) references item (id);
+create table
+	Visitante (id serial not null,
+	dt_visita date,
+	pessoaid int4 not null,
+	primary key (id));
+
+comment on
+column Visitante.dt_visita is 'Data de visita ao museu';
 
 alter table
-	item add constraint item_dono_fk foreign key (cd_dono) references pessoa (id);
+	Visitante add constraint FKVisitante776277 foreign key (pessoaid) references pessoa (id);
 
 alter table
-	item_colecao add constraint item_colecao_item_fk foreign key (cd_item) references item (id);
+	video add constraint FKvideo893307 foreign key (cd_item) references item (id);
 
 alter table
-	item_colecao add constraint item_colecao_colecao_fk foreign key (cd_colecao) references colecao (id);
+	item add constraint FKitem150895 foreign key (cd_dono) references pessoa (id);
 
 alter table
-	item add constraint item_material_fk foreign key (cd_material) references tipoMaterial (id);
+	item_colecao add constraint FKitem_colec189670 foreign key (cd_colecao) references colecao (id);
 
 alter table
-	museu add constraint museu_endereco_fk foreign key (cd_endereco) references endereco (id);
+	item_colecao add constraint FKitem_colec969352 foreign key (cd_item) references item (id);
 
 alter table
-	item add constraint item_fabricante_fk foreign key (cd_fabricante) references fabricante (id);
+	item add constraint FKitem762432 foreign key (cd_material) references tipoMaterial (id);
 
 alter table
-	endereco add constraint endereco_bairro_fk foreign key (cd_bairro) references bairro (id);
+	museu add constraint FKmuseu165157 foreign key (cd_endereco) references endereco (id);
 
 alter table
-	pessoa add constraint pessoa_complemento_fk foreign key (cd_complemento) references endereco (id);
+	item add constraint FKitem235442 foreign key (cd_fabricante) references fabricante (id);
 
 alter table
-	imagem add constraint imagem_item_fk foreign key (cd_item) references item (id);
+	endereco add constraint FKendereco343795 foreign key (bairroid) references bairro (id);
 
 alter table
-	colecao add constraint colecao_setor_fk foreign key (cd_setor) references setor (id);
+	pessoa add constraint FKpessoa916393 foreign key (cd_complemento) references endereco (id);
 
 alter table
-	item add constraint item_setor_fk foreign key (cd_setor) references setor (id);
+	imagem add constraint FKimagem561566 foreign key (cd_item) references item (id);
 
 alter table
-	setor add constraint setor_museu_fk foreign key (cd_museu) references museu (id);
+	colecao add constraint FKcolecao717444 foreign key (cd_setor) references setor (id);
 
 alter table
-	item add constraint item_pais_fk foreign key (cd_pais) references pais (id);
+	item add constraint FKitem709999 foreign key (cd_setor) references setor (id);
 
 alter table
-	estado add constraint estado_pais_fk foreign key (cd_pais) references pais (id);
+	setor add constraint FKsetor755313 foreign key (cd_museu) references museu (id);
 
 alter table
-	item add constraint item_responsavel_fk foreign key (cd_responsavel) references pessoa (id);
+	item add constraint FKitem313911 foreign key (cd_pais) references pais (id);
 
 alter table
-	pessoa add constraint pessoa_tipo_pessoa_fk foreign key (cd_tipoPessoa) references tipoPessoa (id);
+	estado add constraint FKestado596102 foreign key (cd_pais) references pais (id);
 
 alter table
-	usuario add constraint usuario_pessoa_fk foreign key (cd_pessoa) references pessoa (id);
+	item add constraint FKitem223997 foreign key (cd_responsavel) references pessoa (id);
 
 alter table
-	bairro add constraint barro_cidade_fk foreign key (cd_cidade) references cidade (id);
+	pessoa add constraint FKpessoa206129 foreign key (cd_tipoPessoa) references tipoPessoa (id);
 
 alter table
-	cidade add constraint cidade_estado_fk foreign key (cd_estado) references estado (id);
+	usuario add constraint FKusuario265371 foreign key (cd_pessoa) references pessoa (id);
+
+alter table
+	bairro add constraint FKbairro278341 foreign key (cd_cidade) references cidade (id);
+
+alter table
+	cidade add constraint FKcidade486232 foreign key (cd_estado) references estado (id);
