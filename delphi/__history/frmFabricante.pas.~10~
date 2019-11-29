@@ -8,7 +8,7 @@ uses
   Vcl.DBGrids, Vcl.Buttons;
 
 type
-  TnFabricante = class(TForm)
+  TFabricante = class(TForm)
     lblFabricante: TLabel;
     lblBiografia: TLabel;
     edtFabricante: TEdit;
@@ -23,7 +23,7 @@ type
   end;
 
 var
-  nFabricante: TnFabricante;
+  Fabricante: TFabricante;
 
 implementation
 

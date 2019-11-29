@@ -1,7 +1,7 @@
-object nFabricante: TnFabricante
+object Fabricante: TFabricante
   Left = 0
   Top = 0
-  Caption = 'nFabricante'
+  Caption = 'Fabricante'
   ClientHeight = 377
   ClientWidth = 625
   Color = clBtnFace
