@@ -90,7 +90,7 @@ object Fabricante: TFabricante
     Caption = 'Editar'
     TabOrder = 4
   end
-  object btnExcluir: TBitBtn
+  object BitBtn1: TBitBtn
     Left = 414
     Top = 296
     Width = 75
