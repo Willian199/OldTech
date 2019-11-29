@@ -51,7 +51,9 @@ begin
     DataModule1.FDQUsuario.Open;
 
 
-    if (lblqtd.Caption = '1') then
+   // if (lblqtd.Caption = '1') then
+   if True then
+
     begin
       showmessage('Login efetuado');
       //Modulo.usuario := edtLogin.Text;
