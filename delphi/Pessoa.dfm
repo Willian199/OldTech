@@ -60,6 +60,7 @@ object administrarPessoa: TadministrarPessoa
     Top = 24
     Width = 65
     Height = 21
+    Enabled = False
     TabOrder = 0
     Text = '1'
     Visible = False
@@ -69,6 +70,7 @@ object administrarPessoa: TadministrarPessoa
     Top = 77
     Width = 233
     Height = 21
+    Enabled = False
     TabOrder = 1
     Text = 'Luiz Fernando Coppini de Lima'
   end
@@ -77,6 +79,7 @@ object administrarPessoa: TadministrarPessoa
     Top = 133
     Width = 120
     Height = 21
+    Enabled = False
     EditMask = '!999-999-999-99;1;_'
     MaxLength = 14
     TabOrder = 2
@@ -88,6 +91,7 @@ object administrarPessoa: TadministrarPessoa
     Width = 108
     Height = 21
     Date = 35542.000000000000000000
+    Enabled = False
     TabOrder = 3
   end
   object edtTelefone: TMaskEdit
@@ -95,6 +99,7 @@ object administrarPessoa: TadministrarPessoa
     Top = 133
     Width = 108
     Height = 21
+    Enabled = False
     EditMask = '!(99)9 9999-9999;1;_'
     MaxLength = 15
     TabOrder = 4
@@ -105,6 +110,7 @@ object administrarPessoa: TadministrarPessoa
     Top = 192
     Width = 145
     Height = 21
+    Enabled = False
     ItemIndex = 0
     TabOrder = 5
     Text = 'Funcionario'
@@ -116,6 +122,7 @@ object administrarPessoa: TadministrarPessoa
     Top = 192
     Width = 145
     Height = 21
+    Enabled = False
     ItemIndex = 0
     TabOrder = 6
     Text = '1'

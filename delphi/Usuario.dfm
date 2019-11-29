@@ -53,7 +53,9 @@ object cadastroUsuario: TcadastroUsuario
     Top = 29
     Width = 65
     Height = 21
+    Enabled = False
     TabOrder = 0
+    Text = '2'
   end
   object dbUsuario: TDBGrid
     Left = 40
@@ -99,7 +101,9 @@ object cadastroUsuario: TcadastroUsuario
     Top = 77
     Width = 121
     Height = 21
+    Enabled = False
     TabOrder = 2
+    Text = 'admin'
   end
   object edtSenha: TEdit
     Left = 384
@@ -107,7 +111,10 @@ object cadastroUsuario: TcadastroUsuario
     Width = 121
     Height = 21
     HelpType = htKeyword
+    Enabled = False
+    PasswordChar = '*'
     TabOrder = 3
+    Text = 'admin'
   end
   object Edit1: TEdit
     Left = 384
@@ -115,6 +122,8 @@ object cadastroUsuario: TcadastroUsuario
     Width = 121
     Height = 21
     HelpType = htKeyword
+    Enabled = False
+    PasswordChar = '*'
     TabOrder = 4
   end
   object ckbAtivo: TCheckBox
@@ -123,6 +132,9 @@ object cadastroUsuario: TcadastroUsuario
     Width = 97
     Height = 17
     Caption = 'Ativo'
+    Checked = True
+    Enabled = False
+    State = cbChecked
     TabOrder = 5
   end
   object cbPessoa: TComboBox
@@ -130,8 +142,13 @@ object cadastroUsuario: TcadastroUsuario
     Top = 24
     Width = 145
     Height = 21
+    Enabled = False
+    ItemIndex = 0
     TabOrder = 6
-    Text = 'Pessoa'
+    Text = 'Luiz Fernando Coppini de Lima'
+    Items.Strings = (
+      'Luiz Fernando Coppini de Lima'
+      'Napole'#227'o Bonaparte')
   end
   object btnNovo: TButton
     Left = 62
@@ -214,7 +231,7 @@ object cadastroUsuario: TcadastroUsuario
       Control = cbPessoa
       Track = True
       FillDataSource = BindSourceDB2
-      FillValueFieldName = 'cd_tipopessoa'
+      FillValueFieldName = 'id'
       FillDisplayFieldName = 'tx_nome'
       AutoFill = True
       FillExpressions = <>
