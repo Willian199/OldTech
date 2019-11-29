@@ -41,9 +41,10 @@ begin
    end
     else
     begin
+    DataModule1.FDQFabricante.Insert;
     DataModule1.FDQFabricante.Post;
     DataModule1.FDQFabricante.Refresh;
-    ShowMessage('Fabricante salvo com sucesso.');
+    ShowMessage('Cargo salvo com sucesso.');
     end;
 end;
 

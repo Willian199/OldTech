@@ -34,12 +34,13 @@ object nFabricante: TnFabricante
     Height = 21
     TabOrder = 0
   end
-  object TEdit
+  object edtBiografia: TEdit
     Left = 96
     Top = 53
     Width = 121
     Height = 21
     TabOrder = 1
+    Text = 'edtBiografia'
   end
   object DBGrid1: TDBGrid
     Left = 96
@@ -81,6 +82,7 @@ object nFabricante: TnFabricante
     Height = 25
     Caption = 'Salvar'
     TabOrder = 3
+    OnClick = btnSalvarClick
   end
   object btnEditar: TBitBtn
     Left = 240
