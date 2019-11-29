@@ -3,17 +3,18 @@ object DataModule1: TDataModule1
   Height = 543
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
-    VendorHome = 'C:\Users\310725\Desktop\projetoMuseu\delphi\Win32\Debug\dll'
+    VendorHome = 
+      'C:\Users\Gustavo\Desktop\museu\projetoMuseu\delphi\Win32\Debug\d' +
+      'll'
     Left = 32
     Top = 32
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=dados-museu'
+      'Database=postgres'
       'User_Name=postgres'
       'Password=postgres'
       'DriverID=PG')
-    Connected = True
     LoginPrompt = False
     Left = 104
     Top = 32
@@ -412,7 +413,7 @@ object DataModule1: TDataModule1
   object FDQPessoa: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'select * from pessoa')
+      'select * from pessoa order by id asc')
     Left = 251
     Top = 280
     object FDQPessoaid: TIntegerField
@@ -551,9 +552,9 @@ object DataModule1: TDataModule1
   object FDQUsuario2: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'Select * from usuario order by id asc')
-    Left = 395
-    Top = 208
+      'Select * from usuario')
+    Left = 379
+    Top = 160
     object FDQUsuario2id: TIntegerField
       FieldName = 'id'
       Origin = 'id'
@@ -578,7 +579,7 @@ object DataModule1: TDataModule1
   end
   object DSUsuario2: TDataSource
     DataSet = FDQUsuario2
-    Left = 333
-    Top = 208
+    Left = 325
+    Top = 160
   end
 end

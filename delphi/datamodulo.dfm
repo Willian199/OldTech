@@ -15,6 +15,7 @@ object DataModule1: TDataModule1
       'User_Name=postgres'
       'Password=postgres'
       'DriverID=PG')
+    Connected = True
     LoginPrompt = False
     Left = 104
     Top = 32
@@ -227,6 +228,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQFabricante: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from Fabricante')

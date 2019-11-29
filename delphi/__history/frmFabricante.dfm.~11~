@@ -42,8 +42,8 @@ object Fabricante: TFabricante
     TabOrder = 1
   end
   object DBGrid1: TDBGrid
-    Left = 96
-    Top = 168
+    Left = 160
+    Top = 152
     Width = 393
     Height = 120
     DataSource = DataModule1.DSFabricante
