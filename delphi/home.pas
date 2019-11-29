@@ -26,6 +26,8 @@ type
     Sair: TMenuItem;
     Panel1: TPanel;
     procedure PecaClick(Sender: TObject);
+    procedure UsuarioClick(Sender: TObject);
+    procedure cadastroPessoaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,12 +41,24 @@ implementation
 
 {$R *.dfm}
 
-uses ListaItem, datamodulo;
+uses ListaItem, datamodulo, Usuario, Pessoa;
+
+procedure TPrincipal.cadastroPessoaClick(Sender: TObject);
+begin
+  administrarPessoa := TadministrarPessoa.Create(Self);
+  administrarPessoa.ShowModal;
+end;
 
 procedure TPrincipal.PecaClick(Sender: TObject);
 begin
   CadastroItem:= TItem.Create(Self);
   CadastroItem.ShowModal;
+end;
+
+procedure TPrincipal.UsuarioClick(Sender: TObject);
+begin
+  cadastroUsuario:= TCadastroUsuario.Create(Self);
+  cadastroUsuario.ShowModal;
 end;
 
 end.

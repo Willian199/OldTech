@@ -108,7 +108,11 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Usuario.pas">
-            <Form>Form2</Form>
+            <Form>cadastroUsuario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Pessoa.pas">
+            <Form>administrarPessoa</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

@@ -172,6 +172,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQEndereco: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from endereco')
@@ -410,9 +411,10 @@ object DataModule1: TDataModule1
     end
   end
   object FDQPessoa: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
-      'select * from pessoa')
+      'select * from pessoa order by id asc')
     Left = 251
     Top = 280
     object FDQPessoaid: TIntegerField
@@ -498,6 +500,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQUsuario: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'Select count(*) from usuario')
@@ -511,6 +514,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQTipoPessoa: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from tipopessoa')
@@ -547,5 +551,39 @@ object DataModule1: TDataModule1
       FieldName = 'cd_item'
       Origin = 'cd_item'
     end
+  end
+  object FDQUsuario2: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'Select * from usuario')
+    Left = 379
+    Top = 160
+    object FDQUsuario2id: TIntegerField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQUsuario2tx_login: TWideStringField
+      FieldName = 'tx_login'
+      Origin = 'tx_login'
+    end
+    object FDQUsuario2tx_senha: TWideStringField
+      FieldName = 'tx_senha'
+      Origin = 'tx_senha'
+    end
+    object FDQUsuario2fl_ativo: TBooleanField
+      FieldName = 'fl_ativo'
+      Origin = 'fl_ativo'
+    end
+    object FDQUsuario2cd_pessoa: TIntegerField
+      FieldName = 'cd_pessoa'
+      Origin = 'cd_pessoa'
+    end
+  end
+  object DSUsuario2: TDataSource
+    DataSet = FDQUsuario2
+    Left = 325
+    Top = 160
   end
 end

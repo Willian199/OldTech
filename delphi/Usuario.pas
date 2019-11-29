@@ -5,22 +5,36 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Grids,
-  Vcl.DBGrids;
+  Vcl.DBGrids, System.Rtti, System.Bindings.Outputs, Vcl.Bind.Editors,
+  Data.Bind.EngExt, Vcl.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope;
 
 type
-  TForm2 = class(TForm)
+  TcadastroUsuario = class(TForm)
     lblCodigo: TLabel;
     edtCodigo: TEdit;
     lblLogin: TLabel;
     lblSenha: TLabel;
     lblListaUsuarios: TLabel;
-    DBGrid1: TDBGrid;
+    dbUsuario: TDBGrid;
     edtLogin: TEdit;
     edtSenha: TEdit;
     lblConfirmarSenha: TLabel;
     Edit1: TEdit;
     ckbAtivo: TCheckBox;
     cbPessoa: TComboBox;
+    btnNovo: TButton;
+    btnSalvar: TButton;
+    btnEditar: TButton;
+    btnExcluir: TButton;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkControlToField4: TLinkControlToField;
+    LinkFillControlToField1: TLinkFillControlToField;
+    BindSourceDB2: TBindSourceDB;
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,10 +42,22 @@ type
   end;
 
 var
-  Form2: TForm2;
+  cadastroUsuario: TcadastroUsuario;
+
+
 
 implementation
 
 {$R *.dfm}
+
+uses datamodulo;
+
+procedure TcadastroUsuario.FormShow(Sender: TObject);
+begin
+    DataModule1.FDQUsuario.Active:= True;
+    DataModule1.FDQUsuario2.Active:= True;
+    DataModule1.FDQPessoa.Active:= True;
+    DataModule1.FDConnection1.Connected:= True;
+end;
 
 end.

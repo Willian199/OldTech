@@ -1,0 +1,54 @@
+unit Pessoa;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.Mask,
+  Data.DB, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TadministrarPessoa = class(TForm)
+    lblCodigo: TLabel;
+    lblNome: TLabel;
+    lblCpf: TLabel;
+    lblNascimento: TLabel;
+    lblTelefone: TLabel;
+    edtCodigo: TEdit;
+    edtNome: TEdit;
+    edtCpf: TMaskEdit;
+    dtpNascimento: TDateTimePicker;
+    edtTelefone: TMaskEdit;
+    cbTipoPessoa: TComboBox;
+    cbComplemento: TComboBox;
+    DBGrid1: TDBGrid;
+    lblListaPessoa: TLabel;
+    btnNovo: TButton;
+    btnSalvar: TButton;
+    btnEditar: TButton;
+    btnExcluir: TButton;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  administrarPessoa: TadministrarPessoa;
+
+
+
+implementation
+
+uses datamodulo;
+
+procedure TadministrarPessoa.FormShow(Sender: TObject);
+begin
+    DataModule1.FDQPessoa.Active:= True;
+    DataModule1.FDConnection1.Connected:= True;
+end;
+
+{$R *.dfm}
+
+end.
