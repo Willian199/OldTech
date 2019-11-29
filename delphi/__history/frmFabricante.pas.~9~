@@ -15,7 +15,7 @@ type
     DBGrid1: TDBGrid;
     btnSalvar: TBitBtn;
     btnEditar: TBitBtn;
-    btnExcluir: TBitBtn;
+    BitBtn1: TBitBtn;
   private
     { Private declarations }
   public
