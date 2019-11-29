@@ -4,12 +4,18 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.Buttons;
 
 type
-  TFabricante = class(TForm)
+  TnFabricante = class(TForm)
     lblFabricante: TLabel;
     lblBiografia: TLabel;
+    edtFabricante: TEdit;
+    DBGrid1: TDBGrid;
+    btnSalvar: TBitBtn;
+    btnEditar: TBitBtn;
+    btnExcluir: TBitBtn;
   private
     { Private declarations }
   public
@@ -17,10 +23,12 @@ type
   end;
 
 var
-  Fabricante: TFabricante;
+  nFabricante: TnFabricante;
 
 implementation
 
 {$R *.dfm}
+
+uses datamodulo;
 
 end.

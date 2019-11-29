@@ -116,7 +116,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="frmFabricante.pas">
-            <Form>Fabricante</Form>
+            <Form>nFabricante</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

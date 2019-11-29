@@ -28,6 +28,7 @@ type
     procedure PecaClick(Sender: TObject);
     procedure UsuarioClick(Sender: TObject);
     procedure cadastroPessoaClick(Sender: TObject);
+    procedure FabricanteClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,12 +42,18 @@ implementation
 
 {$R *.dfm}
 
-uses ListaItem, datamodulo, Usuario, Pessoa;
+uses ListaItem, datamodulo, Usuario, Pessoa, frmFabricante;
 
 procedure TPrincipal.cadastroPessoaClick(Sender: TObject);
 begin
   administrarPessoa := TadministrarPessoa.Create(Self);
   administrarPessoa.ShowModal;
+end;
+
+procedure TPrincipal.FabricanteClick(Sender: TObject);
+begin
+  nFabricante:= TnFabricante.Create(Self);
+  nFabricante.ShowModal;
 end;
 
 procedure TPrincipal.PecaClick(Sender: TObject);

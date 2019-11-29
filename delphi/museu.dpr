@@ -8,7 +8,7 @@ uses
   ListaItem in 'ListaItem.pas' {Item},
   Usuario in 'Usuario.pas' {cadastroUsuario},
   Pessoa in 'Pessoa.pas' {administrarPessoa},
-  frmFabricante in 'frmFabricante.pas' {Fabricante};
+  frmFabricante in 'frmFabricante.pas' {nFabricante};
 
 {$R *.res}
 
@@ -19,8 +19,8 @@ begin
   Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(TPrincipal, Principal);
   Application.CreateForm(TadministrarPessoa, administrarPessoa);
-  Application.CreateForm(TFabricante, Fabricante);
-  //.CreateForm(TCadastroItem, CadastroItem);
+  Application.CreateForm(TnFabricante, nFabricante);
+  //CreateForm(TCadastroItem, CadastroItem);
   Application.CreateForm(TcadastroUsuario, cadastroUsuario);
   Application.Run;
 end.

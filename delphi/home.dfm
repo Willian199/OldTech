@@ -42,6 +42,7 @@ object Principal: TPrincipal
         end
         object Fabricante: TMenuItem
           Caption = 'Fabricante'
+          OnClick = FabricanteClick
         end
       end
       object Pessoa: TMenuItem
