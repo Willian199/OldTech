@@ -3,7 +3,7 @@ object Item: TItem
   Top = 0
   Caption = 'Item'
   ClientHeight = 505
-  ClientWidth = 575
+  ClientWidth = 573
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

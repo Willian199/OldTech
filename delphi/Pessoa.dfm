@@ -62,7 +62,6 @@ object administrarPessoa: TadministrarPessoa
     Height = 21
     Enabled = False
     TabOrder = 0
-    Text = '1'
   end
   object edtNome: TEdit
     Left = 96
@@ -71,7 +70,6 @@ object administrarPessoa: TadministrarPessoa
     Height = 21
     Enabled = False
     TabOrder = 1
-    Text = 'Luiz Fernando Coppini de Lima'
   end
   object edtCpf: TMaskEdit
     Left = 96
@@ -82,14 +80,13 @@ object administrarPessoa: TadministrarPessoa
     EditMask = '!999-999-999-99;1;_'
     MaxLength = 14
     TabOrder = 2
-    Text = '020-   -   -  '
+    Text = '   -   -   -  '
   end
   object dtpNascimento: TDateTimePicker
     Left = 491
     Top = 80
     Width = 108
     Height = 21
-    Date = 35542.000000000000000000
     Enabled = False
     TabOrder = 3
   end
@@ -151,43 +148,52 @@ object administrarPessoa: TadministrarPessoa
       item
         Expanded = False
         FieldName = 'id'
+        Title.Caption = 'C'#243'digo'
+        Width = 50
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tx_nome'
+        Title.Caption = 'Nome'
+        Width = 150
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tx_cpf'
+        Title.Caption = 'CPF'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'dt_nascimento'
+        Title.Caption = 'Data Nasc.'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tx_telefone'
+        Title.Caption = 'Fone'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'cd_tipopessoa'
+        Title.Caption = 'C'#243'd Tipo Pessoa'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'cd_complemento'
+        Title.Caption = 'Endere'#231'o'
         Visible = True
       end>
   end
   object btnNovo: TButton
     Left = 102
     Top = 456
-    Width = 83
+    Width = 81
     Height = 41
     Caption = 'Novo'
     TabOrder = 8
@@ -289,7 +295,7 @@ object administrarPessoa: TadministrarPessoa
       Track = True
       FillDataSource = BindSourceDB3
       FillValueFieldName = 'id'
-      FillDisplayFieldName = 'id'
+      FillDisplayFieldName = 'cd_bairro'
       AutoFill = True
       FillExpressions = <>
       FillHeaderExpressions = <>

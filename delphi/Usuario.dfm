@@ -73,26 +73,31 @@ object cadastroUsuario: TcadastroUsuario
       item
         Expanded = False
         FieldName = 'id'
+        Title.Caption = 'C'#243'digo'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tx_login'
+        Title.Caption = 'Usuario'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'tx_senha'
+        Title.Caption = 'Senha'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'fl_ativo'
+        Title.Caption = 'Ativo'
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'cd_pessoa'
+        Title.Caption = 'C'#243'd. Pessoa'
         Visible = True
       end>
   end
@@ -151,7 +156,7 @@ object cadastroUsuario: TcadastroUsuario
       'Napole'#227'o Bonaparte')
   end
   object btnNovo: TButton
-    Left = 62
+    Left = 40
     Top = 368
     Width = 83
     Height = 41
@@ -159,7 +164,7 @@ object cadastroUsuario: TcadastroUsuario
     TabOrder = 7
   end
   object btnSalvar: TButton
-    Left = 185
+    Left = 169
     Top = 368
     Width = 80
     Height = 41
@@ -168,7 +173,7 @@ object cadastroUsuario: TcadastroUsuario
     TabOrder = 8
   end
   object btnEditar: TButton
-    Left = 303
+    Left = 295
     Top = 368
     Width = 82
     Height = 41

@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage;
 
 type
   TPrincipal = class(TForm)
@@ -24,7 +25,7 @@ type
     Relatorio: TMenuItem;
     Sobre: TMenuItem;
     Sair: TMenuItem;
-    Panel1: TPanel;
+    Image1: TImage;
     procedure PecaClick(Sender: TObject);
     procedure UsuarioClick(Sender: TObject);
     procedure cadastroPessoaClick(Sender: TObject);

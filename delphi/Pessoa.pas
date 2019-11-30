@@ -130,8 +130,8 @@ end;
 
 procedure TadministrarPessoa.FormShow(Sender: TObject);
 begin
-    DataModule1.FDQPessoa.Active:= True;
     DataModule1.FDConnection1.Connected:= True;
+    DataModule1.FDQPessoa.Active:= True;
 end;
 
 procedure TadministrarPessoa.validarCampos();

@@ -54,10 +54,10 @@ uses datamodulo;
 
 procedure TcadastroUsuario.FormShow(Sender: TObject);
 begin
+    DataModule1.FDConnection1.Connected:= True;
     DataModule1.FDQUsuario.Active:= True;
     DataModule1.FDQUsuario2.Active:= True;
     DataModule1.FDQPessoa.Active:= True;
-    DataModule1.FDConnection1.Connected:= True;
 end;
 
 end.
