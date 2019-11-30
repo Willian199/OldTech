@@ -39,6 +39,7 @@ object Principal: TPrincipal
         end
         object tipoMaterial: TMenuItem
           Caption = 'Tipo de Material'
+          OnClick = tipoMaterialClick
         end
         object Fabricante: TMenuItem
           Caption = 'Fabricante'

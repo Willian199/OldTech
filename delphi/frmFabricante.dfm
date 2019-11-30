@@ -40,7 +40,6 @@ object nFabricante: TnFabricante
     Width = 121
     Height = 21
     TabOrder = 1
-    Text = 'edtBiografia'
   end
   object DBGrid1: TDBGrid
     Left = 96

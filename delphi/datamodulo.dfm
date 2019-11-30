@@ -3,13 +3,13 @@ object DataModule1: TDataModule1
   Height = 543
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
-    VendorHome = 'C:\Users\310725\Desktop\projetoMuseu\delphi\Win32\Debug\dll'
+    VendorHome = 'C:\Users\Gustavo\Desktop\museu\OldTech\delphi\Win32\Debug\dll'
     Left = 32
     Top = 32
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=dados-museu'
+      'Database=postgres'
       'User_Name=postgres'
       'Password=postgres'
       'DriverID=PG')
@@ -172,7 +172,6 @@ object DataModule1: TDataModule1
     end
   end
   object FDQEndereco: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from endereco')
@@ -411,7 +410,6 @@ object DataModule1: TDataModule1
     end
   end
   object FDQPessoa: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from pessoa order by id asc')
@@ -500,7 +498,6 @@ object DataModule1: TDataModule1
     end
   end
   object FDQUsuario: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'Select count(*) from usuario')
@@ -514,7 +511,6 @@ object DataModule1: TDataModule1
     end
   end
   object FDQTipoPessoa: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from tipopessoa')
@@ -553,7 +549,6 @@ object DataModule1: TDataModule1
     end
   end
   object FDQUsuario2: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'Select * from usuario')
