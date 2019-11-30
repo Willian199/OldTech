@@ -1,6 +1,6 @@
 select i.tx_nome, i.dt_fabricacao,f.tx_nome  from item i
 inner join fabricante f on i.cd_fabricante = f.id
-where i.dt_cadastro >= '2018-01-01' and i.fl_exibicao
+where i.dt_cadastro >= '2018-01-01' and i.fl_manutencao
 order by i.tx_nome desc
 
 

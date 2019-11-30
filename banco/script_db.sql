@@ -21,6 +21,7 @@ create table
 	tx_nome varchar(50) not null,
 	tx_descricao varchar(255),
 	cd_setor int4 not null,
+	dt_colecao date,
 	primary key (id));
 
 comment on
@@ -29,13 +30,15 @@ column colecao.tx_nome is 'Nome da coleção';
 comment on
 column colecao.tx_descricao is 'Descrição da coleção';
 
+comment on
+column colecao.dt_colecao is 'Data da coleção';
+
 create table
 	endereco (id serial not null,
 	tx_rua varchar(60) not null,
 	tx_numeroRua numeric(5,
 	0),
-	cd_bairo int4 not null,
-	bairroid int4,
+	cd_bairro int4 not null,
 	primary key (id));
 
 comment on
@@ -243,6 +246,9 @@ comment on
 column Visitante.dt_visita is 'Data de visita ao museu';
 
 alter table
+	endereco add constraint FKendereco538192 foreign key (cd_bairro) references bairro (id);
+
+alter table
 	Visitante add constraint FKVisitante776277 foreign key (pessoaid) references pessoa (id);
 
 alter table
@@ -265,9 +271,6 @@ alter table
 
 alter table
 	item add constraint FKitem235442 foreign key (cd_fabricante) references fabricante (id);
-
-alter table
-	endereco add constraint FKendereco343795 foreign key (bairroid) references bairro (id);
 
 alter table
 	pessoa add constraint FKpessoa916393 foreign key (cd_complemento) references endereco (id);
