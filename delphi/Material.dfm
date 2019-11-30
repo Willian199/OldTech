@@ -60,6 +60,7 @@ object nomeMaterial: TnomeMaterial
     Height = 25
     Caption = 'Salvar'
     TabOrder = 2
+    OnClick = btnSalvarClick
   end
   object btnEditar: TButton
     Left = 198

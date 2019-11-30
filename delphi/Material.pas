@@ -15,6 +15,7 @@ type
     btnSalvar: TButton;
     btnEditar: TButton;
     btnExcluir: TButton;
+    procedure btnSalvarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,5 +30,12 @@ implementation
 {$R *.dfm}
 
 uses datamodulo;
+
+procedure TnomeMaterial.btnSalvarClick(Sender: TObject);
+begin
+   DataModule1.FDQTipoMaterial.Post;
+    DataModule1.FDQTipoMaterial.Refresh;
+    ShowMessage('Dados salvos');
+end;
 
 end.
