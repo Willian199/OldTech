@@ -82,7 +82,7 @@ object administrarPessoa: TadministrarPessoa
     EditMask = '!999-999-999-99;1;_'
     MaxLength = 14
     TabOrder = 2
-    Text = '88.-   -   -  '
+    Text = '020-   -   -  '
   end
   object dtpNascimento: TDateTimePicker
     Left = 491
@@ -114,7 +114,10 @@ object administrarPessoa: TadministrarPessoa
     TabOrder = 5
     Text = 'Funcionario'
     Items.Strings = (
-      'Funcionario')
+      'Funcionario'
+      'Gerente'
+      'Visitante'
+      'Cuidador')
   end
   object cbComplemento: TComboBox
     Left = 454
@@ -126,7 +129,11 @@ object administrarPessoa: TadministrarPessoa
     TabOrder = 6
     Text = '1'
     Items.Strings = (
-      '1')
+      '1'
+      '2'
+      '3'
+      '4'
+      '5')
   end
   object dbPessoa: TDBGrid
     Left = 44
@@ -184,6 +191,7 @@ object administrarPessoa: TadministrarPessoa
     Height = 41
     Caption = 'Novo'
     TabOrder = 8
+    OnClick = btnNovoClick
   end
   object btnSalvar: TButton
     Left = 225
@@ -193,6 +201,7 @@ object administrarPessoa: TadministrarPessoa
     Caption = 'Salvar'
     Enabled = False
     TabOrder = 9
+    OnClick = btnSalvarClick
   end
   object btnEditar: TButton
     Left = 343
@@ -200,8 +209,8 @@ object administrarPessoa: TadministrarPessoa
     Width = 82
     Height = 41
     Caption = 'Editar'
-    Enabled = False
     TabOrder = 10
+    OnClick = btnEditarClick
   end
   object btnExcluir: TButton
     Left = 464
@@ -209,8 +218,8 @@ object administrarPessoa: TadministrarPessoa
     Width = 81
     Height = 41
     Caption = 'Excluir'
-    Enabled = False
     TabOrder = 11
+    OnClick = btnExcluirClick
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule1.FDQPessoa
