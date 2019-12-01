@@ -18,7 +18,6 @@ type
     btnExcluir: TBitBtn;
     edtBiografia: TEdit;
     btnNovo: TButton;
-    procedure FormShow(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
   private
@@ -42,13 +41,6 @@ begin
  edtFabricante.Enabled:=true;
  edtBiografia.Enabled:= true;
 
-end;
-
-procedure TnFabricante.FormShow(Sender: TObject);
-begin
-    DataModule1.FDConnection1.Connected:= True;
-    DataModule1.FDQFabricante.Active:= True;
-    ShowMessage('verifique os campos!');
 end;
 
 procedure TnFabricante.btnSalvarClick(Sender: TObject);

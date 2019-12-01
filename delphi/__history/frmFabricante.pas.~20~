@@ -47,8 +47,7 @@ end;
 procedure TnFabricante.FormShow(Sender: TObject);
 begin
     DataModule1.FDConnection1.Connected:= True;
-    DataModule1.FDQFabricante.Active:= True;
-    ShowMessage('verifique os campos!');
+    DataModule1.FDQPessoa.Active:= True;
 end;
 
 procedure TnFabricante.btnSalvarClick(Sender: TObject);

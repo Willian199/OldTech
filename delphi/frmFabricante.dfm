@@ -11,6 +11,7 @@ object nFabricante: TnFabricante
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lblFabricante: TLabel
