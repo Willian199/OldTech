@@ -2,7 +2,7 @@ object Peca: TPeca
   Left = 0
   Top = 0
   Caption = 'PE'#199'A'
-  ClientHeight = 351
+  ClientHeight = 303
   ClientWidth = 680
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -70,43 +70,43 @@ object Peca: TPeca
     Caption = 'Valor'
   end
   object Label9: TLabel
-    Left = 490
+    Left = 520
     Top = 96
     Width = 61
     Height = 13
     Caption = 'Respons'#225'vel'
   end
   object Label10: TLabel
-    Left = 249
+    Left = 536
     Top = 136
     Width = 19
     Height = 13
     Caption = 'Pa'#237's'
   end
   object Label11: TLabel
-    Left = 418
+    Left = 529
     Top = 176
     Width = 51
     Height = 13
     Caption = 'Fabricante'
   end
   object Label12: TLabel
-    Left = 443
-    Top = 136
+    Left = 544
+    Top = 200
     Width = 26
     Height = 13
     Caption = 'Setor'
   end
   object Label13: TLabel
-    Left = 230
-    Top = 176
+    Left = 432
+    Top = 208
     Width = 38
     Height = 13
     Caption = 'Material'
   end
   object Label14: TLabel
-    Left = 34
-    Top = 176
+    Left = 328
+    Top = 200
     Width = 25
     Height = 13
     Caption = 'Dono'
@@ -182,47 +182,5 @@ object Peca: TPeca
     Date = 43800.000000000000000000
     Time = 0.723825787034002100
     TabOrder = 8
-  end
-  object cbDono: TComboBox
-    Left = 72
-    Top = 173
-    Width = 117
-    Height = 21
-    TabOrder = 9
-  end
-  object cbMaterial: TComboBox
-    Left = 274
-    Top = 173
-    Width = 117
-    Height = 21
-    TabOrder = 10
-  end
-  object cbFabricante: TComboBox
-    Left = 490
-    Top = 173
-    Width = 117
-    Height = 21
-    TabOrder = 11
-  end
-  object cbPais: TComboBox
-    Left = 274
-    Top = 133
-    Width = 117
-    Height = 21
-    TabOrder = 12
-  end
-  object cbResponsavel: TComboBox
-    Left = 557
-    Top = 93
-    Width = 89
-    Height = 21
-    TabOrder = 13
-  end
-  object cbSetor: TComboBox
-    Left = 490
-    Top = 133
-    Width = 117
-    Height = 21
-    TabOrder = 14
   end
 end

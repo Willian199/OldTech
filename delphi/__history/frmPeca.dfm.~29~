@@ -2,7 +2,7 @@ object Peca: TPeca
   Left = 0
   Top = 0
   Caption = 'PE'#199'A'
-  ClientHeight = 351
+  ClientHeight = 303
   ClientWidth = 680
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -91,8 +91,8 @@ object Peca: TPeca
     Caption = 'Fabricante'
   end
   object Label12: TLabel
-    Left = 443
-    Top = 136
+    Left = 544
+    Top = 200
     Width = 26
     Height = 13
     Caption = 'Setor'
@@ -217,12 +217,5 @@ object Peca: TPeca
     Width = 89
     Height = 21
     TabOrder = 13
-  end
-  object cbSetor: TComboBox
-    Left = 490
-    Top = 133
-    Width = 117
-    Height = 21
-    TabOrder = 14
   end
 end

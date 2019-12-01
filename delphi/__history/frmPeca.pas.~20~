@@ -32,11 +32,6 @@ type
     dtFabricacao: TDateTimePicker;
     dtConstrucao: TDateTimePicker;
     cbDono: TComboBox;
-    cbMaterial: TComboBox;
-    cbFabricante: TComboBox;
-    cbPais: TComboBox;
-    cbResponsavel: TComboBox;
-    cbSetor: TComboBox;
   private
     { Private declarations }
   public

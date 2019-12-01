@@ -63,7 +63,7 @@ object Peca: TPeca
     Caption = 'Tempo Manuten'#231#227'o'
   end
   object Label8: TLabel
-    Left = 248
+    Left = 230
     Top = 96
     Width = 24
     Height = 13
@@ -77,11 +77,39 @@ object Peca: TPeca
     Caption = 'Respons'#225'vel'
   end
   object Label10: TLabel
-    Left = 500
+    Left = 536
     Top = 136
     Width = 19
     Height = 13
     Caption = 'Pa'#237's'
+  end
+  object Label11: TLabel
+    Left = 529
+    Top = 176
+    Width = 51
+    Height = 13
+    Caption = 'Fabricante'
+  end
+  object Label12: TLabel
+    Left = 544
+    Top = 200
+    Width = 26
+    Height = 13
+    Caption = 'Setor'
+  end
+  object Label13: TLabel
+    Left = 432
+    Top = 208
+    Width = 38
+    Height = 13
+    Caption = 'Material'
+  end
+  object Label14: TLabel
+    Left = 328
+    Top = 200
+    Width = 25
+    Height = 13
+    Caption = 'Dono'
   end
   object CheckBox1: TCheckBox
     Left = 372
@@ -90,5 +118,60 @@ object Peca: TPeca
     Height = 17
     Caption = 'Em Exibi'#231#227'o'
     TabOrder = 0
+  end
+  object edtNome: TEdit
+    Left = 72
+    Top = 21
+    Width = 105
+    Height = 21
+    TabOrder = 1
+  end
+  object edtOrigem: TEdit
+    Left = 72
+    Top = 48
+    Width = 105
+    Height = 21
+    TabOrder = 2
+  end
+  object edtDescricao: TEdit
+    Left = 84
+    Top = 93
+    Width = 105
+    Height = 21
+    TabOrder = 3
+  end
+  object edtValor: TEdit
+    Left = 261
+    Top = 93
+    Width = 105
+    Height = 26
+    TabOrder = 4
+  end
+  object dtExposicao: TDateTimePicker
+    Left = 230
+    Top = 43
+    Width = 110
+    Height = 21
+    Date = 43800.000000000000000000
+    Time = 0.723825787034002100
+    TabOrder = 5
+  end
+  object dtManutencao: TDateTimePicker
+    Left = 375
+    Top = 43
+    Width = 110
+    Height = 21
+    Date = 43800.000000000000000000
+    Time = 0.723825787034002100
+    TabOrder = 6
+  end
+  object dtFabricacao: TDateTimePicker
+    Left = 536
+    Top = 43
+    Width = 110
+    Height = 21
+    Date = 43800.000000000000000000
+    Time = 0.723825787034002100
+    TabOrder = 7
   end
 end

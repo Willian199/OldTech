@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
 
 type
   TPeca = class(TForm)
@@ -19,6 +19,17 @@ type
     CheckBox1: TCheckBox;
     Label9: TLabel;
     Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    edtNome: TEdit;
+    edtOrigem: TEdit;
+    edtDescricao: TEdit;
+    edtValor: TEdit;
+    dtExposicao: TDateTimePicker;
+    dtManutencao: TDateTimePicker;
+    dtFabricacao: TDateTimePicker;
   private
     { Private declarations }
   public

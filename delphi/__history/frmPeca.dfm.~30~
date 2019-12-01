@@ -2,7 +2,7 @@ object Peca: TPeca
   Left = 0
   Top = 0
   Caption = 'PE'#199'A'
-  ClientHeight = 351
+  ClientHeight = 303
   ClientWidth = 680
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

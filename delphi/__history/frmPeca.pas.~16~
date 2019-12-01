@@ -13,6 +13,20 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    CheckBox1: TCheckBox;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    edtNome: TEdit;
+    edtOrigem: TEdit;
+    edtDescricao: TEdit;
+    edtValor: TEdit;
   private
     { Private declarations }
   public
