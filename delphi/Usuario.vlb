@@ -22,9 +22,6 @@ Coordinates=1050,160,95,51
 [lblListaUsuarios]
 Coordinates=-10,210,94,51
 
-[Edit1]
-Coordinates=910,60,40,51
-
 [lblCodigo]
 Coordinates=10,144,61,51
 
@@ -175,4 +172,7 @@ Coordinates=91,90,82,33
 
 [BindSourceDB2]
 Coordinates=940,400,126,195
+
+[edtConfirmarSenha]
+Coordinates=910,60,40,51
 

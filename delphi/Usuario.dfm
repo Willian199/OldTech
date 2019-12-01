@@ -121,7 +121,7 @@ object cadastroUsuario: TcadastroUsuario
     TabOrder = 3
     Text = 'admin'
   end
-  object Edit1: TEdit
+  object edtConfirmarSenha: TEdit
     Left = 384
     Top = 117
     Width = 121
@@ -153,7 +153,11 @@ object cadastroUsuario: TcadastroUsuario
     Text = 'Luiz Fernando Coppini de Lima'
     Items.Strings = (
       'Luiz Fernando Coppini de Lima'
-      'Napole'#227'o Bonaparte')
+      'Pedro Pascal'
+      'Robert de Niro'
+      'Al Pacino'
+      'Joe Pesci'
+      'Tom Hanks')
   end
   object btnNovo: TButton
     Left = 40
@@ -162,6 +166,7 @@ object cadastroUsuario: TcadastroUsuario
     Height = 41
     Caption = 'Novo'
     TabOrder = 7
+    OnClick = btnNovoClick
   end
   object btnSalvar: TButton
     Left = 169
@@ -171,6 +176,7 @@ object cadastroUsuario: TcadastroUsuario
     Caption = 'Salvar'
     Enabled = False
     TabOrder = 8
+    OnClick = btnSalvarClick
   end
   object btnEditar: TButton
     Left = 295
@@ -180,6 +186,7 @@ object cadastroUsuario: TcadastroUsuario
     Caption = 'Editar'
     Enabled = False
     TabOrder = 9
+    OnClick = btnEditarClick
   end
   object btnExcluir: TButton
     Left = 424
@@ -189,6 +196,7 @@ object cadastroUsuario: TcadastroUsuario
     Caption = 'Excluir'
     Enabled = False
     TabOrder = 10
+    OnClick = btnExcluirClick
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule1.FDQUsuario2

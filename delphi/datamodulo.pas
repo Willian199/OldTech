@@ -120,10 +120,10 @@ type
     FDQUsuario2: TFDQuery;
     FDQUsuario2id: TIntegerField;
     FDQUsuario2tx_login: TWideStringField;
-    FDQUsuario2tx_senha: TWideStringField;
     FDQUsuario2fl_ativo: TBooleanField;
     FDQUsuario2cd_pessoa: TIntegerField;
     DSUsuario2: TDataSource;
+    FDQUsuario2tx_senha: TWideStringField;
   private
     { Private declarations }
   public
