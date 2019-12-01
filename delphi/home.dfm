@@ -841,6 +841,7 @@ object Principal: TPrincipal
         end
         object Colecao: TMenuItem
           Caption = 'Cole'#231#227'o'
+          OnClick = ColecaoClick
         end
         object tipoMaterial: TMenuItem
           Caption = 'Tipo de Material'

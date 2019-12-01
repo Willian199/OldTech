@@ -27,25 +27,12 @@ object frmColecao: TfrmColecao
     Height = 13
     Caption = 'Descri'#231#227'o:'
   end
-  object lblNpessoas: TLabel
-    Left = 24
-    Top = 88
-    Width = 83
-    Height = 13
-    Caption = 'Numero Pessoas:'
-  end
-  object lblMuseu: TLabel
-    Left = 24
-    Top = 120
-    Width = 31
-    Height = 13
-    Caption = 'Museu'
-  end
   object edtNome: TEdit
     Left = 112
     Top = 21
     Width = 121
     Height = 21
+    Enabled = False
     TabOrder = 0
   end
   object edtDescricao: TEdit
@@ -53,20 +40,38 @@ object frmColecao: TfrmColecao
     Top = 48
     Width = 121
     Height = 21
+    Enabled = False
     TabOrder = 1
   end
-  object edtPessoa: TEdit
-    Left = 113
-    Top = 85
-    Width = 121
+  object cbSetor: TComboBox
+    Left = 312
+    Top = 21
+    Width = 145
     Height = 21
+    Enabled = False
     TabOrder = 2
   end
-  object edtMuseu: TEdit
-    Left = 112
-    Top = 112
-    Width = 121
-    Height = 21
-    TabOrder = 3
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQSetor
+    ScopeMappings = <>
+    Left = 272
+    Top = 144
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_nome'
+      Control = cbSetor
+      Track = True
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
   end
 end

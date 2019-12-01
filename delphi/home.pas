@@ -31,6 +31,7 @@ type
     procedure cadastroPessoaClick(Sender: TObject);
     procedure FabricanteClick(Sender: TObject);
     procedure tipoMaterialClick(Sender: TObject);
+    procedure ColecaoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,12 +45,18 @@ implementation
 
 {$R *.dfm}
 
-uses ListaItem, datamodulo, Usuario, Pessoa, frmFabricante, Material;
+uses ListaItem, datamodulo, Usuario, Pessoa, frmFabricante, Material, Colecao;
 
 procedure TPrincipal.cadastroPessoaClick(Sender: TObject);
 begin
   administrarPessoa := TadministrarPessoa.Create(Self);
   administrarPessoa.ShowModal;
+end;
+
+procedure TPrincipal.ColecaoClick(Sender: TObject);
+begin
+  frmColecao:= TfrmColecao.Create(Self);
+  frmColecao.ShowModal;
 end;
 
 procedure TPrincipal.FabricanteClick(Sender: TObject);
