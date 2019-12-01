@@ -16,7 +16,7 @@ uses
   Estado in 'Estado.pas' {cadastroEstado},
   Cidade in 'Cidade.pas' {cadastroCidade},
   Bairro in 'Bairro.pas' {cadastroBairro},
-  Endereco in 'Endereco.pas' {cadastroEndereco};
+  Endereco in 'Endereco.pas' {Form2};
 
 {$R *.res}
 
@@ -35,7 +35,7 @@ begin
   Application.CreateForm(TcadastroEstado, cadastroEstado);
   Application.CreateForm(TcadastroCidade, cadastroCidade);
   Application.CreateForm(TcadastroBairro, cadastroBairro);
-  Application.CreateForm(TcadastroEndereco, cadastroEndereco);
+  Application.CreateForm(TForm2, Form2);
   //teForm(TCadastroItem, CadastroItem);
   Application.CreateForm(TcadastroUsuario, cadastroUsuario);
   Application.Run;
