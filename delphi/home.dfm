@@ -863,6 +863,21 @@ object Principal: TPrincipal
           OnClick = UsuarioClick
         end
       end
+      object Endereco: TMenuItem
+        Caption = 'Endere'#231'o'
+        object Pais: TMenuItem
+          Caption = 'Pa'#237's'
+        end
+        object Estado: TMenuItem
+          Caption = 'Estado'
+        end
+        object Cidade: TMenuItem
+          Caption = 'Cidade'
+        end
+        object EnderecoSubMenu: TMenuItem
+          Caption = 'Endereco'
+        end
+      end
     end
     object Controladoria: TMenuItem
       Caption = 'Controladoria'

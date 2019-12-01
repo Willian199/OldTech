@@ -26,6 +26,11 @@ type
     Sobre: TMenuItem;
     Sair: TMenuItem;
     Image1: TImage;
+    Endereco: TMenuItem;
+    Pais: TMenuItem;
+    Cidade: TMenuItem;
+    Estado: TMenuItem;
+    EnderecoSubMenu: TMenuItem;
     procedure PecaClick(Sender: TObject);
     procedure UsuarioClick(Sender: TObject);
     procedure cadastroPessoaClick(Sender: TObject);
