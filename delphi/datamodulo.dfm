@@ -1,7 +1,7 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
   Height = 543
-  VerticalOffset = 1
+  VerticalOffset = 2
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
     VendorHome = 'C:\Users\Luiz Coppini\Desktop\OldTech\delphi\Win32\Debug\dll'
@@ -126,6 +126,7 @@ object DataModule1: TDataModule1
     Top = 104
   end
   object FDQCidade: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cidade')
@@ -201,6 +202,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQEstado: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from estado')
@@ -250,6 +252,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQPais: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from pais')

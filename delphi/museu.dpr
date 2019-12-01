@@ -11,7 +11,8 @@ uses
   frmFabricante in 'frmFabricante.pas' {nFabricante},
   Material in 'Material.pas' {nomeMaterial},
   Colecao in 'Colecao.pas' {frmColecao},
-  frmPeca in 'frmPeca.pas' {nPeca};
+  frmPeca in 'frmPeca.pas' {nPeca},
+  Pais in 'Pais.pas' {Form2};
 
 {$R *.res}
 
@@ -26,6 +27,7 @@ begin
   Application.CreateForm(TnomeMaterial, nomeMaterial);
   Application.CreateForm(TfrmColecao, frmColecao);
   Application.CreateForm(TnPeca, nPeca);
+  Application.CreateForm(TForm2, Form2);
   //teForm(TCadastroItem, CadastroItem);
   Application.CreateForm(TcadastroUsuario, cadastroUsuario);
   Application.Run;

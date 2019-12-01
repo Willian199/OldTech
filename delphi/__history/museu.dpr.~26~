@@ -7,7 +7,11 @@ uses
   home in 'home.pas' {Principal},
   ListaItem in 'ListaItem.pas' {Item},
   Usuario in 'Usuario.pas' {cadastroUsuario},
-  Pessoa in 'Pessoa.pas' {cadastroPessoa};
+  Pessoa in 'Pessoa.pas' {administrarPessoa},
+  frmFabricante in 'frmFabricante.pas' {nFabricante},
+  Material in 'Material.pas' {nomeMaterial},
+  Colecao in 'Colecao.pas' {frmColecao},
+  frmPeca in 'frmPeca.pas' {nPeca};
 
 {$R *.res}
 
@@ -17,8 +21,12 @@ begin
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(TPrincipal, Principal);
-  Application.CreateForm(TcadastroPessoa, cadastroPessoa);
-  //Application.CreateForm(TCadastroItem, CadastroItem);
+  Application.CreateForm(TadministrarPessoa, administrarPessoa);
+  Application.CreateForm(TnFabricante, nFabricante);
+  Application.CreateForm(TnomeMaterial, nomeMaterial);
+  Application.CreateForm(TfrmColecao, frmColecao);
+  Application.CreateForm(TnPeca, nPeca);
+  //teForm(TCadastroItem, CadastroItem);
   Application.CreateForm(TcadastroUsuario, cadastroUsuario);
   Application.Run;
 end.
