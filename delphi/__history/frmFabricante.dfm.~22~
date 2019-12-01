@@ -1,0 +1,104 @@
+object nFabricante: TnFabricante
+  Left = 0
+  Top = 0
+  Caption = 'nFabricante'
+  ClientHeight = 377
+  ClientWidth = 625
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblFabricante: TLabel
+    Left = 24
+    Top = 24
+    Width = 55
+    Height = 13
+    Caption = 'Fabricante:'
+  end
+  object lblBiografia: TLabel
+    Left = 24
+    Top = 56
+    Width = 46
+    Height = 13
+    Caption = 'Biografia:'
+  end
+  object edtFabricante: TEdit
+    Left = 96
+    Top = 21
+    Width = 121
+    Height = 21
+    Enabled = False
+    TabOrder = 0
+  end
+  object edtBiografia: TEdit
+    Left = 96
+    Top = 53
+    Width = 121
+    Height = 21
+    Enabled = False
+    TabOrder = 1
+  end
+  object DBGrid1: TDBGrid
+    Left = 96
+    Top = 128
+    Width = 393
+    Height = 120
+    DataSource = DataModule1.DSFabricante
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = 'Codigo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_nome'
+        Title.Caption = 'Fabricante'
+        Width = 125
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_biografia'
+        Title.Caption = 'Biografia'
+        Visible = True
+      end>
+  end
+  object btnSalvar: TBitBtn
+    Left = 96
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 3
+    OnClick = btnSalvarClick
+  end
+  object btnEditar: TBitBtn
+    Left = 240
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Editar'
+    TabOrder = 4
+  end
+  object btnExcluir: TBitBtn
+    Left = 414
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 5
+  end
+end

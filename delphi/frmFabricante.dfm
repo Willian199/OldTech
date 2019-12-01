@@ -32,6 +32,7 @@ object nFabricante: TnFabricante
     Top = 21
     Width = 121
     Height = 21
+    Enabled = False
     TabOrder = 0
   end
   object edtBiografia: TEdit
@@ -39,6 +40,7 @@ object nFabricante: TnFabricante
     Top = 53
     Width = 121
     Height = 21
+    Enabled = False
     TabOrder = 1
   end
   object DBGrid1: TDBGrid
@@ -75,7 +77,7 @@ object nFabricante: TnFabricante
       end>
   end
   object btnSalvar: TBitBtn
-    Left = 96
+    Left = 192
     Top = 296
     Width = 75
     Height = 25
@@ -84,7 +86,7 @@ object nFabricante: TnFabricante
     OnClick = btnSalvarClick
   end
   object btnEditar: TBitBtn
-    Left = 240
+    Left = 304
     Top = 296
     Width = 75
     Height = 25
@@ -98,5 +100,14 @@ object nFabricante: TnFabricante
     Height = 25
     Caption = 'Excluir'
     TabOrder = 5
+  end
+  object btnNovo: TButton
+    Left = 96
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 6
+    OnClick = btnNovoClick
   end
 end

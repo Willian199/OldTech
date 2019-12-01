@@ -3,19 +3,16 @@ object DataModule1: TDataModule1
   Height = 543
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
-    VendorHome = 
-      'C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu' +
-      '\delphi\Win32\Debug\dll'
+    VendorHome = 'C:\Users\Gustavo\Desktop\museu\OldTech\delphi\Win32\Debug\dll'
     Left = 32
     Top = 32
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=dados-museu'
+      'Database=postgres'
       'User_Name=postgres'
       'Password=postgres'
       'DriverID=PG')
-    Connected = True
     LoginPrompt = False
     Left = 104
     Top = 32

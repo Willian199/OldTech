@@ -17,7 +17,9 @@ type
     btnEditar: TBitBtn;
     btnExcluir: TBitBtn;
     edtBiografia: TEdit;
+    btnNovo: TButton;
     procedure btnSalvarClick(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,6 +34,14 @@ implementation
 {$R *.dfm}
 
 uses datamodulo;
+
+procedure TnFabricante.btnNovoClick(Sender: TObject);
+begin
+ DataModule1.FDQFabricante.Insert;
+ edtFabricante.Enabled:=true;
+ edtBiografia.Enabled:= true;
+
+end;
 
 procedure TnFabricante.btnSalvarClick(Sender: TObject);
 begin
