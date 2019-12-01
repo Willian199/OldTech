@@ -11,6 +11,7 @@ object nomeMaterial: TnomeMaterial
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lblMaterial: TLabel
@@ -25,6 +26,7 @@ object nomeMaterial: TnomeMaterial
     Top = 37
     Width = 121
     Height = 21
+    Enabled = False
     TabOrder = 0
   end
   object DBGrid1: TDBGrid
@@ -54,7 +56,7 @@ object nomeMaterial: TnomeMaterial
       end>
   end
   object btnSalvar: TButton
-    Left = 72
+    Left = 155
     Top = 224
     Width = 75
     Height = 25
@@ -63,12 +65,13 @@ object nomeMaterial: TnomeMaterial
     OnClick = btnSalvarClick
   end
   object btnEditar: TButton
-    Left = 198
+    Left = 236
     Top = 224
     Width = 75
     Height = 25
     Caption = 'Editar'
     TabOrder = 3
+    OnClick = btnEditarClick
   end
   object btnExcluir: TButton
     Left = 317
@@ -77,5 +80,34 @@ object nomeMaterial: TnomeMaterial
     Height = 25
     Caption = 'Excluir'
     TabOrder = 4
+    OnClick = btnExcluirClick
+  end
+  object btnNovo: TButton
+    Left = 74
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 5
+    OnClick = btnNovoClick
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQTipoMaterial
+    ScopeMappings = <>
+    Left = 256
+    Top = 160
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_material'
+      Control = edtMaterial
+      Track = True
+    end
   end
 end

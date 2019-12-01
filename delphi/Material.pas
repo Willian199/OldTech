@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Vcl.Grids,
-  Vcl.DBGrids;
+  Vcl.DBGrids, System.Rtti, System.Bindings.Outputs, Vcl.Bind.Editors,
+  Data.Bind.EngExt, Vcl.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope;
 
 type
   TnomeMaterial = class(TForm)
@@ -15,7 +16,15 @@ type
     btnSalvar: TButton;
     btnEditar: TButton;
     btnExcluir: TButton;
+    btnNovo: TButton;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkControlToField1: TLinkControlToField;
+    procedure FormShow(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,11 +40,38 @@ implementation
 
 uses datamodulo;
 
+procedure TnomeMaterial.btnEditarClick(Sender: TObject);
+begin
+
+  edtMaterial.Enabled:=true;
+  edtMaterial.SetFocus;
+end;
+
+procedure TnomeMaterial.btnExcluirClick(Sender: TObject);
+begin
+ DataModule1.FDQTipoMaterial.Delete;
+    ShowMessage('Material excluído!');
+end;
+
+procedure TnomeMaterial.btnNovoClick(Sender: TObject);
+begin
+   DataModule1.FDQTipoMaterial.Insert;
+    edtMaterial.Enabled:=true;
+  edtMaterial.SetFocus;
+end;
+
 procedure TnomeMaterial.btnSalvarClick(Sender: TObject);
 begin
    DataModule1.FDQTipoMaterial.Post;
     DataModule1.FDQTipoMaterial.Refresh;
     ShowMessage('Dados salvos');
+end;
+
+procedure TnomeMaterial.FormShow(Sender: TObject);
+begin
+    DataModule1.FDConnection1.Connected:= True;
+    DataModule1.FDQTipoMaterial.Active:= True;
+
 end;
 
 end.

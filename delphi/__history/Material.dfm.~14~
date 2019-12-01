@@ -1,0 +1,91 @@
+object nomeMaterial: TnomeMaterial
+  Left = 0
+  Top = 0
+  Caption = 'Material'
+  ClientHeight = 314
+  ClientWidth = 516
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblMaterial: TLabel
+    Left = 24
+    Top = 40
+    Width = 65
+    Height = 13
+    Caption = 'Tipo Material:'
+  end
+  object edtMaterial: TEdit
+    Left = 112
+    Top = 37
+    Width = 121
+    Height = 21
+    Enabled = False
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 72
+    Top = 64
+    Width = 320
+    Height = 120
+    DataSource = DataModule1.DSTipoMaterial
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = 'Codigo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_material'
+        Title.Caption = 'Material'
+        Visible = True
+      end>
+  end
+  object btnSalvar: TButton
+    Left = 155
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 2
+    OnClick = btnSalvarClick
+  end
+  object btnEditar: TButton
+    Left = 236
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Editar'
+    TabOrder = 3
+  end
+  object btnExcluir: TButton
+    Left = 317
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 4
+  end
+  object btnNovo: TButton
+    Left = 74
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 5
+    OnClick = btnNovoClick
+  end
+end
