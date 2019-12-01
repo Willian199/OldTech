@@ -11,6 +11,7 @@ object frmColecao: TfrmColecao
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lblNome: TLabel
@@ -51,6 +52,42 @@ object frmColecao: TfrmColecao
     Enabled = False
     TabOrder = 2
   end
+  object btnNovo: TButton
+    Left = 96
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 3
+    OnClick = btnNovoClick
+  end
+  object btnSalvar: TButton
+    Left = 208
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 4
+    OnClick = btnSalvarClick
+  end
+  object btnEditar: TButton
+    Left = 312
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Editar'
+    TabOrder = 5
+    OnClick = btnEditarClick
+  end
+  object btnExcluir: TButton
+    Left = 408
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 6
+    OnClick = btnExcluirClick
+  end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule1.FDQSetor
     ScopeMappings = <>
@@ -64,14 +101,37 @@ object frmColecao: TfrmColecao
     Top = 5
     object LinkFillControlToField1: TLinkFillControlToField
       Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'tx_nome'
+      DataSource = BindSourceDB2
+      FieldName = 'cd_setor'
       Control = cbSetor
       Track = True
+      FillDataSource = BindSourceDB1
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_nome'
       AutoFill = True
       FillExpressions = <>
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'tx_nome'
+      Control = edtNome
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'tx_descricao'
+      Control = edtDescricao
+      Track = True
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModule1.FDQColecao
+    ScopeMappings = <>
+    Left = 280
+    Top = 152
   end
 end

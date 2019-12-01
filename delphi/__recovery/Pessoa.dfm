@@ -1,0 +1,319 @@
+object administrarPessoa: TadministrarPessoa
+  Left = 0
+  Top = 0
+  Caption = 'Pessoa'
+  ClientHeight = 545
+  ClientWidth = 707
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblCodigo: TLabel
+    Left = 44
+    Top = 24
+    Width = 37
+    Height = 13
+    Caption = 'C'#243'digo:'
+  end
+  object lblNome: TLabel
+    Left = 44
+    Top = 80
+    Width = 31
+    Height = 13
+    Caption = 'Nome:'
+  end
+  object lblCpf: TLabel
+    Left = 44
+    Top = 136
+    Width = 23
+    Height = 13
+    Caption = 'CPF:'
+  end
+  object lblNascimento: TLabel
+    Left = 387
+    Top = 80
+    Width = 85
+    Height = 13
+    Caption = 'Data Nascimento:'
+  end
+  object lblTelefone: TLabel
+    Left = 426
+    Top = 136
+    Width = 46
+    Height = 13
+    Caption = 'Telefone:'
+  end
+  object lblListaPessoa: TLabel
+    Left = 44
+    Top = 256
+    Width = 38
+    Height = 13
+    Caption = 'Pessoa:'
+  end
+  object edtCodigo: TEdit
+    Left = 96
+    Top = 24
+    Width = 65
+    Height = 21
+    Enabled = False
+    TabOrder = 0
+  end
+  object edtNome: TEdit
+    Left = 96
+    Top = 77
+    Width = 233
+    Height = 21
+    Enabled = False
+    TabOrder = 1
+  end
+  object edtCpf: TMaskEdit
+    Left = 96
+    Top = 133
+    Width = 120
+    Height = 21
+    Enabled = False
+    EditMask = '!999-999-999-99;1;_'
+    MaxLength = 14
+    TabOrder = 2
+    Text = '   -   -   -  '
+  end
+  object dtpNascimento: TDateTimePicker
+    Left = 491
+    Top = 80
+    Width = 108
+    Height = 21
+    Date = 43800.000000000000000000
+    Time = 0.667446493054740100
+    Enabled = False
+    TabOrder = 3
+  end
+  object edtTelefone: TMaskEdit
+    Left = 491
+    Top = 133
+    Width = 108
+    Height = 21
+    Enabled = False
+    EditMask = '!(99)9 9999-9999;1;_'
+    MaxLength = 15
+    TabOrder = 4
+    Text = '(  )      -    '
+  end
+  object cbTipoPessoa: TComboBox
+    Left = 44
+    Top = 192
+    Width = 145
+    Height = 21
+    Enabled = False
+    ItemIndex = 0
+    TabOrder = 5
+    Text = 'Funcionario'
+    Items.Strings = (
+      'Funcionario'
+      'Gerente'
+      'Visitante'
+      'Cuidador')
+  end
+  object cbComplemento: TComboBox
+    Left = 454
+    Top = 192
+    Width = 145
+    Height = 21
+    Enabled = False
+    ItemIndex = 0
+    TabOrder = 6
+    Text = '1'
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5')
+  end
+  object dbPessoa: TDBGrid
+    Left = 44
+    Top = 288
+    Width = 555
+    Height = 120
+    DataSource = DataModule1.DSPessoa
+    TabOrder = 7
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = 'C'#243'digo'
+        Width = 50
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_nome'
+        Title.Caption = 'Nome'
+        Width = 150
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_cpf'
+        Title.Caption = 'CPF'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'dt_nascimento'
+        Title.Caption = 'Data Nasc.'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_telefone'
+        Title.Caption = 'Fone'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'cd_tipopessoa'
+        Title.Caption = 'C'#243'd Tipo Pessoa'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'cd_complemento'
+        Title.Caption = 'Endere'#231'o'
+        Visible = True
+      end>
+  end
+  object btnNovo: TButton
+    Left = 102
+    Top = 456
+    Width = 81
+    Height = 41
+    Caption = 'Novo'
+    TabOrder = 8
+    OnClick = btnNovoClick
+  end
+  object btnSalvar: TButton
+    Left = 225
+    Top = 456
+    Width = 80
+    Height = 41
+    Caption = 'Salvar'
+    Enabled = False
+    TabOrder = 9
+    OnClick = btnSalvarClick
+  end
+  object btnEditar: TButton
+    Left = 343
+    Top = 456
+    Width = 82
+    Height = 41
+    Caption = 'Editar'
+    TabOrder = 10
+    OnClick = btnEditarClick
+  end
+  object btnExcluir: TButton
+    Left = 464
+    Top = 456
+    Width = 81
+    Height = 41
+    Caption = 'Excluir'
+    TabOrder = 11
+    OnClick = btnExcluirClick
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQPessoa
+    ScopeMappings = <>
+    Left = 408
+    Top = 8
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 340
+    Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_nome'
+      Control = edtNome
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_telefone'
+      Control = edtTelefone
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_cpf'
+      Control = edtCpf
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'dt_nascimento'
+      Control = dtpNascimento
+      Track = True
+    end
+    object LinkControlToField5: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'id'
+      Control = edtCodigo
+      Track = True
+    end
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'cd_tipopessoa'
+      Control = cbTipoPessoa
+      Track = True
+      FillDataSource = BindSourceDB2
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tipo'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField2: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'cd_complemento'
+      Control = cbComplemento
+      Track = True
+      FillDataSource = BindSourceDB3
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'cd_bairro'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModule1.FDQTipoPessoa
+    ScopeMappings = <>
+    Left = 480
+    Top = 8
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = DataModule1.FDQEndereco
+    ScopeMappings = <>
+    Left = 552
+    Top = 8
+  end
+end
