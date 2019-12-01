@@ -27,6 +27,8 @@ type
     procedure FormShow(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,11 +44,26 @@ implementation
 
 uses datamodulo;
 
+procedure TnFabricante.btnEditarClick(Sender: TObject);
+begin
+ edtFabricante.Enabled:= true;
+ edtBiografia.Enabled:= true;
+ edtFabricante.SetFocus;
+
+end;
+
+procedure TnFabricante.btnExcluirClick(Sender: TObject);
+begin
+    DataModule1.FDQFabricante.Delete;
+    ShowMessage('Fabricante excluído!');
+end;
+
 procedure TnFabricante.btnNovoClick(Sender: TObject);
 begin
  DataModule1.FDQFabricante.Insert;
  edtFabricante.Enabled:=true;
  edtBiografia.Enabled:= true;
+ edtFabricante.SetFocus;
 
 end;
 

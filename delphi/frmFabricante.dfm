@@ -93,6 +93,7 @@ object nFabricante: TnFabricante
     Height = 25
     Caption = 'Editar'
     TabOrder = 4
+    OnClick = btnEditarClick
   end
   object btnExcluir: TBitBtn
     Left = 414
@@ -101,6 +102,7 @@ object nFabricante: TnFabricante
     Height = 25
     Caption = 'Excluir'
     TabOrder = 5
+    OnClick = btnExcluirClick
   end
   object btnNovo: TButton
     Left = 96
