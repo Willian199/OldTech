@@ -1,0 +1,38 @@
+unit Estado;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Vcl.Grids,
+  Vcl.DBGrids;
+
+type
+  TForm3 = class(TForm)
+    Label1: TLabel;
+    edtCodigo: TEdit;
+    lblNome: TLabel;
+    lblPais: TLabel;
+    lblSigla: TLabel;
+    edtNome: TEdit;
+    edtSigla: TEdit;
+    cbPais: TComboBox;
+    btnNovo: TButton;
+    btnSalvar: TButton;
+    btnEditar: TButton;
+    btnExcluir: TButton;
+    dbEstado: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,9 +1,9 @@
 object Form2: TForm2
   Left = 0
   Top = 0
-  Caption = 'Cadastro de Pa'#237's'
-  ClientHeight = 345
-  ClientWidth = 434
+  Caption = 'Form2'
+  ClientHeight = 377
+  ClientWidth = 552
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,38 +14,36 @@ object Form2: TForm2
   PixelsPerInch = 96
   TextHeight = 13
   object lblCodigo: TLabel
-    Left = 24
+    Left = 32
     Top = 48
     Width = 37
     Height = 13
     Caption = 'C'#243'digo:'
   end
   object lblNome: TLabel
-    Left = 184
+    Left = 200
     Top = 48
     Width = 23
     Height = 13
     Caption = 'Pa'#237's:'
   end
   object edtCodigo: TEdit
-    Left = 80
+    Left = 88
     Top = 45
     Width = 73
     Height = 21
-    Enabled = False
     TabOrder = 0
   end
   object edtPais: TEdit
-    Left = 223
+    Left = 264
     Top = 45
     Width = 185
     Height = 21
-    Enabled = False
     TabOrder = 1
   end
   object dbPais: TDBGrid
-    Left = 56
-    Top = 104
+    Left = 88
+    Top = 128
     Width = 320
     Height = 120
     TabOrder = 2
@@ -56,16 +54,16 @@ object Form2: TForm2
     TitleFont.Style = []
   end
   object btnNovo: TButton
-    Left = 24
-    Top = 272
+    Left = 40
+    Top = 304
     Width = 83
     Height = 41
     Caption = 'Novo'
     TabOrder = 3
   end
   object btnSalvar: TButton
-    Left = 127
-    Top = 272
+    Left = 169
+    Top = 304
     Width = 80
     Height = 41
     Caption = 'Salvar'
@@ -73,8 +71,8 @@ object Form2: TForm2
     TabOrder = 4
   end
   object btnEditar: TButton
-    Left = 223
-    Top = 272
+    Left = 295
+    Top = 304
     Width = 82
     Height = 41
     Caption = 'Editar'
@@ -82,8 +80,8 @@ object Form2: TForm2
     TabOrder = 5
   end
   object btnExcluir: TButton
-    Left = 327
-    Top = 272
+    Left = 424
+    Top = 304
     Width = 81
     Height = 41
     Caption = 'Excluir'

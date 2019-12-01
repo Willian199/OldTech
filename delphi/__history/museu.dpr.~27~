@@ -12,8 +12,7 @@ uses
   Material in 'Material.pas' {nomeMaterial},
   Colecao in 'Colecao.pas' {frmColecao},
   frmPeca in 'frmPeca.pas' {nPeca},
-  Pais in 'Pais.pas' {Form2},
-  Estado in 'Estado.pas' {Form3};
+  Pais in 'Pais.pas' {Form2};
 
 {$R *.res}
 
@@ -29,7 +28,6 @@ begin
   Application.CreateForm(TfrmColecao, frmColecao);
   Application.CreateForm(TnPeca, nPeca);
   Application.CreateForm(TForm2, Form2);
-  Application.CreateForm(TForm3, Form3);
   //teForm(TCadastroItem, CadastroItem);
   Application.CreateForm(TcadastroUsuario, cadastroUsuario);
   Application.Run;

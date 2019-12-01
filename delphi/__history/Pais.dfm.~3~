@@ -2,8 +2,8 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Cadastro de Pa'#237's'
-  ClientHeight = 345
-  ClientWidth = 434
+  ClientHeight = 371
+  ClientWidth = 433
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -32,7 +32,6 @@ object Form2: TForm2
     Top = 45
     Width = 73
     Height = 21
-    Enabled = False
     TabOrder = 0
   end
   object edtPais: TEdit
@@ -40,12 +39,11 @@ object Form2: TForm2
     Top = 45
     Width = 185
     Height = 21
-    Enabled = False
     TabOrder = 1
   end
   object dbPais: TDBGrid
-    Left = 56
-    Top = 104
+    Left = 64
+    Top = 136
     Width = 320
     Height = 120
     TabOrder = 2
@@ -57,7 +55,7 @@ object Form2: TForm2
   end
   object btnNovo: TButton
     Left = 24
-    Top = 272
+    Top = 304
     Width = 83
     Height = 41
     Caption = 'Novo'
@@ -65,7 +63,7 @@ object Form2: TForm2
   end
   object btnSalvar: TButton
     Left = 127
-    Top = 272
+    Top = 304
     Width = 80
     Height = 41
     Caption = 'Salvar'
@@ -74,7 +72,7 @@ object Form2: TForm2
   end
   object btnEditar: TButton
     Left = 223
-    Top = 272
+    Top = 304
     Width = 82
     Height = 41
     Caption = 'Editar'
@@ -83,7 +81,7 @@ object Form2: TForm2
   end
   object btnExcluir: TButton
     Left = 327
-    Top = 272
+    Top = 304
     Width = 81
     Height = 41
     Caption = 'Excluir'
