@@ -1,4 +1,4 @@
-object Form2: TForm2
+object cadastroPais: TcadastroPais
   Left = 0
   Top = 0
   Caption = 'Cadastro de Pa'#237's'

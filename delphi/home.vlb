@@ -3,8 +3,7 @@ Visible=False
 Coordinates=949,531,149,33
 
 [DataModule1.FDQPessoa]
-Visible=False
-Coordinates=949,999,139,33
+Coordinates=1098,1009,139,33
 
 [DataModule1.FDQTipoPessoa]
 Visible=False
@@ -91,8 +90,7 @@ Coordinates=285,500,116,33
 Coordinates=949,843,43,33
 
 [DataModule1.FDQUsuario2]
-Coordinates=10,359,147,141
-Visible=False
+Coordinates=167,369,147,141
 
 [Fabricante]
 Coordinates=949,895,66,33

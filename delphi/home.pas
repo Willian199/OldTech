@@ -31,6 +31,7 @@ type
     Cidade: TMenuItem;
     Estado: TMenuItem;
     EnderecoSubMenu: TMenuItem;
+    Bairro: TMenuItem;
     procedure PecaClick(Sender: TObject);
     procedure UsuarioClick(Sender: TObject);
     procedure cadastroPessoaClick(Sender: TObject);

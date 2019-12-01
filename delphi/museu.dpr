@@ -12,9 +12,10 @@ uses
   Material in 'Material.pas' {nomeMaterial},
   Colecao in 'Colecao.pas' {frmColecao},
   frmPeca in 'frmPeca.pas' {nPeca},
-  Pais in 'Pais.pas' {Form2},
-  Estado in 'Estado.pas' {Form3},
-  Cidade in 'Cidade.pas' {Form4};
+  Pais in 'Pais.pas' {cadastroPais},
+  Estado in 'Estado.pas' {cadastroEstado},
+  Cidade in 'Cidade.pas' {cadastroCidade},
+  Bairro in 'Bairro.pas' {cadastroBairro};
 
 {$R *.res}
 
@@ -29,9 +30,10 @@ begin
   Application.CreateForm(TnomeMaterial, nomeMaterial);
   Application.CreateForm(TfrmColecao, frmColecao);
   Application.CreateForm(TnPeca, nPeca);
-  Application.CreateForm(TForm2, Form2);
-  Application.CreateForm(TForm3, Form3);
-  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TcadastroPais, cadastroPais);
+  Application.CreateForm(TcadastroEstado, cadastroEstado);
+  Application.CreateForm(TcadastroCidade, cadastroCidade);
+  Application.CreateForm(TcadastroBairro, cadastroBairro);
   //teForm(TCadastroItem, CadastroItem);
   Application.CreateForm(TcadastroUsuario, cadastroUsuario);
   Application.Run;

@@ -1,4 +1,4 @@
-object Form4: TForm4
+object cadastroCidade: TcadastroCidade
   Left = 0
   Top = 0
   Caption = 'Cadastro de Cidade'

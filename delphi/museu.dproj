@@ -132,15 +132,19 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Pais.pas">
-            <Form>Form2</Form>
+            <Form>cadastroPais</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Estado.pas">
-            <Form>Form3</Form>
+            <Form>cadastroEstado</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Cidade.pas">
-            <Form>Form4</Form>
+            <Form>cadastroCidade</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Bairro.pas">
+            <Form>cadastroBairro</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

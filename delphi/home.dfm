@@ -874,6 +874,9 @@ object Principal: TPrincipal
         object Cidade: TMenuItem
           Caption = 'Cidade'
         end
+        object Bairro: TMenuItem
+          Caption = 'Bairro'
+        end
         object EnderecoSubMenu: TMenuItem
           Caption = 'Endereco'
         end

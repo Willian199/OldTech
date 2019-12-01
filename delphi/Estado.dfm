@@ -1,4 +1,4 @@
-object Form3: TForm3
+object cadastroEstado: TcadastroEstado
   Left = 0
   Top = 0
   Caption = 'Cadastro de Estado'

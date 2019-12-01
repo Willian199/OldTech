@@ -8,7 +8,7 @@ uses
   Vcl.StdCtrls;
 
 type
-  TForm2 = class(TForm)
+  TcadastroPais = class(TForm)
     lblCodigo: TLabel;
     edtCodigo: TEdit;
     lblNome: TLabel;
@@ -25,7 +25,7 @@ type
   end;
 
 var
-  Form2: TForm2;
+  cadastroPais: TcadastroPais;
 
 implementation
 
