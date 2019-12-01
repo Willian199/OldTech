@@ -111,4 +111,30 @@ object nFabricante: TnFabricante
     TabOrder = 6
     OnClick = btnNovoClick
   end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQFabricante
+    ScopeMappings = <>
+    Left = 304
+    Top = 192
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_nome'
+      Control = edtFabricante
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_biografia'
+      Control = edtBiografia
+      Track = True
+    end
+  end
 end
