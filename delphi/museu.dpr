@@ -10,7 +10,8 @@ uses
   Pessoa in 'Pessoa.pas' {administrarPessoa},
   frmFabricante in 'frmFabricante.pas' {nFabricante},
   Material in 'Material.pas' {nomeMaterial},
-  Colecao in 'Colecao.pas' {frmColecao};
+  Colecao in 'Colecao.pas' {frmColecao},
+  frmPeca in 'frmPeca.pas' {nPeca};
 
 {$R *.res}
 
@@ -24,7 +25,8 @@ begin
   Application.CreateForm(TnFabricante, nFabricante);
   Application.CreateForm(TnomeMaterial, nomeMaterial);
   Application.CreateForm(TfrmColecao, frmColecao);
-  //eateForm(TCadastroItem, CadastroItem);
+  Application.CreateForm(TnPeca, nPeca);
+  //teForm(TCadastroItem, CadastroItem);
   Application.CreateForm(TcadastroUsuario, cadastroUsuario);
   Application.Run;
 end.

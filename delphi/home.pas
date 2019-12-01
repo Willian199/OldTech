@@ -45,7 +45,8 @@ implementation
 
 {$R *.dfm}
 
-uses ListaItem, datamodulo, Usuario, Pessoa, frmFabricante, Material, Colecao;
+uses ListaItem, datamodulo, Usuario, Pessoa, frmFabricante, Material, Colecao,
+  frmPeca;
 
 procedure TPrincipal.cadastroPessoaClick(Sender: TObject);
 begin
@@ -67,8 +68,8 @@ end;
 
 procedure TPrincipal.PecaClick(Sender: TObject);
 begin
-  CadastroItem:= TItem.Create(Self);
-  CadastroItem.ShowModal;
+  nPeca:= TNPeca.Create(Self);
+  nPeca.ShowModal;
 end;
 
 procedure TPrincipal.tipoMaterialClick(Sender: TObject);

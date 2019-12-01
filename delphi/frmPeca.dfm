@@ -1,4 +1,4 @@
-object Peca: TPeca
+object nPeca: TnPeca
   Left = 0
   Top = 0
   Caption = 'PE'#199'A'
@@ -11,31 +11,32 @@ object Peca: TPeca
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 32
+    Left = 8
     Top = 24
     Width = 27
     Height = 13
     Caption = 'Nome'
   end
   object Label2: TLabel
-    Left = 32
-    Top = 56
+    Left = 8
+    Top = 51
     Width = 34
     Height = 13
     Caption = 'Origem'
   end
   object Label3: TLabel
-    Left = 32
+    Left = 8
     Top = 96
     Width = 46
     Height = 13
     Caption = 'Descri'#231#227'o'
   end
   object Label4: TLabel
-    Left = 32
+    Left = 8
     Top = 136
     Width = 81
     Height = 13
@@ -63,7 +64,7 @@ object Peca: TPeca
     Caption = 'Tempo Manuten'#231#227'o'
   end
   object Label8: TLabel
-    Left = 230
+    Left = 244
     Top = 96
     Width = 24
     Height = 13
@@ -84,14 +85,14 @@ object Peca: TPeca
     Caption = 'Pa'#237's'
   end
   object Label11: TLabel
-    Left = 418
+    Left = 490
     Top = 176
     Width = 51
     Height = 13
     Caption = 'Fabricante'
   end
   object Label12: TLabel
-    Left = 443
+    Left = 490
     Top = 136
     Width = 26
     Height = 13
@@ -105,18 +106,19 @@ object Peca: TPeca
     Caption = 'Material'
   end
   object Label14: TLabel
-    Left = 34
+    Left = 8
     Top = 176
     Width = 25
     Height = 13
     Caption = 'Dono'
   end
-  object CheckBox1: TCheckBox
-    Left = 372
+  object chExibicao: TCheckBox
+    Left = 403
     Top = 95
-    Width = 97
+    Width = 82
     Height = 17
     Caption = 'Em Exibi'#231#227'o'
+    Enabled = False
     TabOrder = 0
   end
   object edtNome: TEdit
@@ -124,6 +126,7 @@ object Peca: TPeca
     Top = 21
     Width = 105
     Height = 21
+    Enabled = False
     TabOrder = 1
   end
   object edtOrigem: TEdit
@@ -131,20 +134,23 @@ object Peca: TPeca
     Top = 48
     Width = 105
     Height = 21
+    Enabled = False
     TabOrder = 2
   end
   object edtDescricao: TEdit
-    Left = 84
+    Left = 72
     Top = 93
     Width = 105
     Height = 21
+    Enabled = False
     TabOrder = 3
   end
   object edtValor: TEdit
-    Left = 261
+    Left = 286
     Top = 93
     Width = 105
     Height = 26
+    Enabled = False
     TabOrder = 4
   end
   object dtExposicao: TDateTimePicker
@@ -154,6 +160,7 @@ object Peca: TPeca
     Height = 21
     Date = 43800.000000000000000000
     Time = 0.723825787034002100
+    Enabled = False
     TabOrder = 5
   end
   object dtManutencao: TDateTimePicker
@@ -163,6 +170,7 @@ object Peca: TPeca
     Height = 21
     Date = 43800.000000000000000000
     Time = 0.723825787034002100
+    Enabled = False
     TabOrder = 6
   end
   object dtFabricacao: TDateTimePicker
@@ -172,43 +180,49 @@ object Peca: TPeca
     Height = 21
     Date = 43800.000000000000000000
     Time = 0.723825787034002100
+    Enabled = False
     TabOrder = 7
   end
   object dtConstrucao: TDateTimePicker
-    Left = 119
-    Top = 136
+    Left = 95
+    Top = 133
     Width = 110
     Height = 21
     Date = 43800.000000000000000000
     Time = 0.723825787034002100
+    Enabled = False
     TabOrder = 8
   end
   object cbDono: TComboBox
-    Left = 72
+    Left = 88
     Top = 173
     Width = 117
     Height = 21
+    Enabled = False
     TabOrder = 9
   end
   object cbMaterial: TComboBox
-    Left = 274
+    Left = 286
     Top = 173
-    Width = 117
+    Width = 105
     Height = 21
+    Enabled = False
     TabOrder = 10
   end
   object cbFabricante: TComboBox
-    Left = 490
+    Left = 557
     Top = 173
-    Width = 117
+    Width = 89
     Height = 21
+    Enabled = False
     TabOrder = 11
   end
   object cbPais: TComboBox
-    Left = 274
+    Left = 286
     Top = 133
-    Width = 117
+    Width = 105
     Height = 21
+    Enabled = False
     TabOrder = 12
   end
   object cbResponsavel: TComboBox
@@ -216,13 +230,237 @@ object Peca: TPeca
     Top = 93
     Width = 89
     Height = 21
+    Enabled = False
     TabOrder = 13
   end
   object cbSetor: TComboBox
-    Left = 490
+    Left = 557
     Top = 133
-    Width = 117
+    Width = 82
     Height = 21
+    Enabled = False
     TabOrder = 14
+  end
+  object btnNovo: TButton
+    Left = 64
+    Top = 318
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 15
+    OnClick = btnNovoClick
+  end
+  object btnSalvar: TButton
+    Left = 193
+    Top = 318
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 16
+  end
+  object btnEditar: TButton
+    Left = 316
+    Top = 318
+    Width = 75
+    Height = 25
+    Caption = 'Editar'
+    TabOrder = 17
+  end
+  object btnExcluir: TButton
+    Left = 441
+    Top = 318
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 18
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQPais
+    ScopeMappings = <>
+    Left = 336
+    Top = 184
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'cd_pais'
+      Control = cbPais
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_nome'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField2: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'cd_material'
+      Control = cbMaterial
+      Track = True
+      FillDataSource = BindSourceDB2
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_material'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField3: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'cd_setor'
+      Control = cbSetor
+      Track = True
+      FillDataSource = BindSourceDB3
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_nome'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField4: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'cd_fabricante'
+      Control = cbFabricante
+      Track = True
+      FillDataSource = BindSourceDB4
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_nome'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField5: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'cd_dono'
+      Control = cbDono
+      Track = True
+      FillDataSource = BindSourceDB5
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_nome'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkFillControlToField6: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'cd_responsavel'
+      Control = cbResponsavel
+      Track = True
+      FillDataSource = BindSourceDB5
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_nome'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'tx_nome'
+      Control = edtNome
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'tx_origem'
+      Control = edtOrigem
+      Track = True
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'tx_descricao'
+      Control = edtDescricao
+      Track = True
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'dt_construido'
+      Control = dtConstrucao
+      Track = True
+    end
+    object LinkControlToField5: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'dt_fabricacao'
+      Control = dtFabricacao
+      Track = True
+    end
+    object LinkControlToField6: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'fl_exibicao'
+      Control = chExibicao
+      Track = True
+    end
+    object LinkControlToField7: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'vl_valor'
+      Control = edtValor
+      Track = True
+    end
+    object LinkControlToField8: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'tp_manutencao'
+      Control = dtManutencao
+      Track = True
+    end
+    object LinkControlToField9: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB6
+      FieldName = 'tp_exposicao'
+      Control = dtExposicao
+      Track = True
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModule1.FDQTipoMaterial
+    ScopeMappings = <>
+    Left = 344
+    Top = 192
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = DataModule1.FDQSetor
+    ScopeMappings = <>
+    Left = 352
+    Top = 200
+  end
+  object BindSourceDB4: TBindSourceDB
+    DataSet = DataModule1.FDQFabricante
+    ScopeMappings = <>
+    Left = 360
+    Top = 208
+  end
+  object BindSourceDB5: TBindSourceDB
+    DataSet = DataModule1.FDQPessoa
+    ScopeMappings = <>
+    Left = 368
+    Top = 216
+  end
+  object BindSourceDB6: TBindSourceDB
+    DataSet = DataModule1.FDQItem
+    ScopeMappings = <>
+    Left = 376
+    Top = 224
   end
 end
