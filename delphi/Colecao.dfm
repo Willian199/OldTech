@@ -88,11 +88,51 @@ object frmColecao: TfrmColecao
     TabOrder = 6
     OnClick = btnExcluirClick
   end
+  object gridColecao: TDBGrid
+    Left = 96
+    Top = 104
+    Width = 377
+    Height = 90
+    DataSource = DataModule1.DSColecao
+    TabOrder = 7
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = 'Codigo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_nome'
+        Title.Caption = 'Nome'
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_descricao'
+        Title.Caption = 'Descricao'
+        Width = 145
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'cd_setor'
+        Title.Caption = 'Setor'
+        Visible = True
+      end>
+  end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule1.FDQSetor
     ScopeMappings = <>
-    Left = 272
-    Top = 144
+    Left = 504
+    Top = 104
   end
   object BindingsList1: TBindingsList
     Methods = <>
@@ -131,7 +171,7 @@ object frmColecao: TfrmColecao
   object BindSourceDB2: TBindSourceDB
     DataSet = DataModule1.FDQColecao
     ScopeMappings = <>
-    Left = 280
+    Left = 512
     Top = 152
   end
 end
