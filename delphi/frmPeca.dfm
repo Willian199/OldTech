@@ -257,6 +257,7 @@ object nPeca: TnPeca
     Height = 25
     Caption = 'Salvar'
     TabOrder = 16
+    OnClick = btnSalvarClick
   end
   object btnEditar: TButton
     Left = 316
@@ -265,6 +266,7 @@ object nPeca: TnPeca
     Height = 25
     Caption = 'Editar'
     TabOrder = 17
+    OnClick = btnEditarClick
   end
   object btnExcluir: TButton
     Left = 441
@@ -273,12 +275,54 @@ object nPeca: TnPeca
     Height = 25
     Caption = 'Excluir'
     TabOrder = 18
+    OnClick = btnExcluirClick
+  end
+  object gridItem: TDBGrid
+    Left = 72
+    Top = 224
+    Width = 413
+    Height = 56
+    DataSource = DataModule1.DSItem
+    TabOrder = 19
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Title.Caption = 'Codigo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_nome'
+        Title.Caption = 'Nome'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_origem'
+        Title.Caption = 'Origem'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tx_descricao'
+        Title.Caption = 'Descri'#231#227'o'
+        Width = 127
+        Visible = True
+      end>
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule1.FDQPais
     ScopeMappings = <>
-    Left = 336
-    Top = 184
+    Left = 632
+    Top = 208
   end
   object BindingsList1: TBindingsList
     Methods = <>
@@ -436,31 +480,31 @@ object nPeca: TnPeca
   object BindSourceDB2: TBindSourceDB
     DataSet = DataModule1.FDQTipoMaterial
     ScopeMappings = <>
-    Left = 344
-    Top = 192
+    Left = 584
+    Top = 240
   end
   object BindSourceDB3: TBindSourceDB
     DataSet = DataModule1.FDQSetor
     ScopeMappings = <>
-    Left = 352
-    Top = 200
+    Left = 640
+    Top = 256
   end
   object BindSourceDB4: TBindSourceDB
     DataSet = DataModule1.FDQFabricante
     ScopeMappings = <>
-    Left = 360
-    Top = 208
+    Left = 536
+    Top = 280
   end
   object BindSourceDB5: TBindSourceDB
     DataSet = DataModule1.FDQPessoa
     ScopeMappings = <>
-    Left = 368
-    Top = 216
+    Left = 568
+    Top = 312
   end
   object BindSourceDB6: TBindSourceDB
     DataSet = DataModule1.FDQItem
     ScopeMappings = <>
-    Left = 376
-    Top = 224
+    Left = 616
+    Top = 304
   end
 end

@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, System.Rtti,
   System.Bindings.Outputs, Vcl.Bind.Editors, Data.Bind.EngExt,
-  Vcl.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope;
+  Vcl.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope, Data.DB,
+  Vcl.Grids, Vcl.DBGrids;
 
 type
   TnPeca = class(TForm)
@@ -65,9 +66,13 @@ type
     LinkControlToField7: TLinkControlToField;
     LinkControlToField8: TLinkControlToField;
     LinkControlToField9: TLinkControlToField;
+    gridItem: TDBGrid;
     procedure FormShow(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
     procedure habilitaCampos();
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -82,6 +87,18 @@ implementation
 {$R *.dfm}
 
 uses datamodulo;
+
+procedure TnPeca.btnEditarClick(Sender: TObject);
+begin
+ habilitaCampos();
+ edtNome.SetFocus;
+end;
+
+procedure TnPeca.btnExcluirClick(Sender: TObject);
+begin
+  DataModule1.FDQItem.Delete;
+    ShowMessage('Item excluído!');
+end;
 
 procedure TnPeca.btnNovoClick(Sender: TObject);
 begin
@@ -106,8 +123,16 @@ begin
  cbResponsavel.Enabled:=true;
  cbSetor.Enabled:=true;
  chExibicao.Enabled:= true;
+ edtNome.SetFocus;
 
 end;
+procedure TnPeca.btnSalvarClick(Sender: TObject);
+begin
+    DataModule1.FDQItem.Post;
+    DataModule1.FDQItem.Refresh;
+    ShowMessage('Item salvo com sucesso.');
+end;
+
 procedure TnPeca.FormShow(Sender: TObject);
 begin
     DataModule1.FDConnection1.Connected:= True;
