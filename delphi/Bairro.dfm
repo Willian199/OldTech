@@ -1,7 +1,7 @@
 object cadastroBairro: TcadastroBairro
   Left = 0
   Top = 0
-  Caption = 'cadastroBairro'
+  Caption = 'Bairro'
   ClientHeight = 416
   ClientWidth = 432
   Color = clBtnFace

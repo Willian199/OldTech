@@ -1,7 +1,7 @@
 object cadastroEndereco: TcadastroEndereco
   Left = 0
   Top = 0
-  Caption = 'Cadastro de Endereco'
+  Caption = 'Endereco'
   ClientHeight = 384
   ClientWidth = 421
   Color = clBtnFace

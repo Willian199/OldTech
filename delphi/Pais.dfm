@@ -1,7 +1,7 @@
 object cadastroPais: TcadastroPais
   Left = 0
   Top = 0
-  Caption = 'Cadastro de Pa'#237's'
+  Caption = 'Pa'#237's'
   ClientHeight = 345
   ClientWidth = 434
   Color = clBtnFace

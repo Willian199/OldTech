@@ -38,6 +38,11 @@ type
     procedure FabricanteClick(Sender: TObject);
     procedure tipoMaterialClick(Sender: TObject);
     procedure ColecaoClick(Sender: TObject);
+    procedure PaisClick(Sender: TObject);
+    procedure EstadoClick(Sender: TObject);
+    procedure CidadeClick(Sender: TObject);
+    procedure BairroClick(Sender: TObject);
+    procedure EnderecoSubMenuClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,12 +57,24 @@ implementation
 {$R *.dfm}
 
 uses ListaItem, datamodulo, Usuario, Pessoa, frmFabricante, Material, Colecao,
-  frmPeca;
+  frmPeca, Pais, Estado, Cidade, Bairro, Endereco;
+
+procedure TPrincipal.BairroClick(Sender: TObject);
+begin
+  cadastroBairro:= TCadastroBairro.Create(Self);
+  cadastroBairro.ShowModal;
+end;
 
 procedure TPrincipal.cadastroPessoaClick(Sender: TObject);
 begin
   administrarPessoa := TadministrarPessoa.Create(Self);
   administrarPessoa.ShowModal;
+end;
+
+procedure TPrincipal.CidadeClick(Sender: TObject);
+begin
+  cadastroCidade:= TCadastroCidade.Create(Self);
+  cadastroCidade.ShowModal;
 end;
 
 procedure TPrincipal.ColecaoClick(Sender: TObject);
@@ -66,10 +83,28 @@ begin
   frmColecao.ShowModal;
 end;
 
+procedure TPrincipal.EnderecoSubMenuClick(Sender: TObject);
+begin
+  cadastroEndereco:= TCadastroEndereco.Create(Self);
+  cadastroEndereco.ShowModal;
+end;
+
+procedure TPrincipal.EstadoClick(Sender: TObject);
+begin
+  cadastroEstado:= TCadastroEstado.Create(Self);
+  cadastroEstado.ShowModal;
+end;
+
 procedure TPrincipal.FabricanteClick(Sender: TObject);
 begin
   nFabricante:= TnFabricante.Create(Self);
   nFabricante.ShowModal;
+end;
+
+procedure TPrincipal.PaisClick(Sender: TObject);
+begin
+  cadastroPais:= TCadastroPais.Create(Self);
+  cadastroPais.ShowModal;
 end;
 
 procedure TPrincipal.PecaClick(Sender: TObject);

@@ -1,7 +1,7 @@
 object cadastroCidade: TcadastroCidade
   Left = 0
   Top = 0
-  Caption = 'Cadastro de Cidade'
+  Caption = 'Cidade'
   ClientHeight = 413
   ClientWidth = 432
   Color = clBtnFace

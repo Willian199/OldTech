@@ -1,7 +1,7 @@
 object cadastroEstado: TcadastroEstado
   Left = 0
   Top = 0
-  Caption = 'Cadastro de Estado'
+  Caption = 'Estado'
   ClientHeight = 408
   ClientWidth = 436
   Color = clBtnFace
