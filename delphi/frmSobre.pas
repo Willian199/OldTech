@@ -4,10 +4,21 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
-  TSobre = class(TForm)
+  TnSobre = class(TForm)
+    Image1: TImage;
+    OldTech: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
   private
     { Private declarations }
   public
@@ -15,7 +26,7 @@ type
   end;
 
 var
-  Sobre: TSobre;
+  nSobre: TnSobre;
 
 implementation
 

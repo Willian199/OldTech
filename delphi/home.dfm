@@ -901,6 +901,7 @@ object Principal: TPrincipal
     end
     object Sobre: TMenuItem
       Caption = 'Sobre'
+      OnClick = SobreClick
     end
     object Sair: TMenuItem
       Caption = 'Sair'

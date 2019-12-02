@@ -43,6 +43,7 @@ type
     procedure CidadeClick(Sender: TObject);
     procedure BairroClick(Sender: TObject);
     procedure EnderecoSubMenuClick(Sender: TObject);
+    procedure SobreClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -57,7 +58,7 @@ implementation
 {$R *.dfm}
 
 uses ListaItem, datamodulo, Usuario, Pessoa, frmFabricante, Material, Colecao,
-  frmPeca, Pais, Estado, Cidade, Bairro, Endereco;
+  frmPeca, Pais, Estado, Cidade, Bairro, Endereco, frmSobre;
 
 procedure TPrincipal.BairroClick(Sender: TObject);
 begin
@@ -111,6 +112,12 @@ procedure TPrincipal.PecaClick(Sender: TObject);
 begin
   nPeca:= TNPeca.Create(Self);
   nPeca.ShowModal;
+end;
+
+procedure TPrincipal.SobreClick(Sender: TObject);
+begin
+    nSobre:= TNSobre.Create(Self);
+    nSobre.ShowModal;
 end;
 
 procedure TPrincipal.tipoMaterialClick(Sender: TObject);
