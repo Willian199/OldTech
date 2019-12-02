@@ -47,7 +47,7 @@ procedure TcadastroCidade.FormShow(Sender: TObject);
 begin
     DataModule1.FDConnection1.Connected:= True;
     DataModule1.FDQCidade.Active:= True;
-    DataModule1.FDQPais.Active:= True;
+    DataModule1.FDQEstado.Active:= True;
 end;
 
 end.

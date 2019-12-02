@@ -48,6 +48,7 @@ object cadastroEstado: TcadastroEstado
     Height = 21
     Enabled = False
     TabOrder = 0
+    Text = '1'
   end
   object edtNome: TEdit
     Left = 64
@@ -56,6 +57,7 @@ object cadastroEstado: TcadastroEstado
     Height = 21
     Enabled = False
     TabOrder = 1
+    Text = 'Santa Catarina'
   end
   object edtSigla: TEdit
     Left = 352
@@ -64,6 +66,7 @@ object cadastroEstado: TcadastroEstado
     Height = 21
     Enabled = False
     TabOrder = 2
+    Text = 'SC'
   end
   object cbPais: TComboBox
     Left = 264
@@ -71,7 +74,11 @@ object cadastroEstado: TcadastroEstado
     Width = 145
     Height = 21
     Enabled = False
+    ItemIndex = 0
     TabOrder = 3
+    Text = 'Brasil'
+    Items.Strings = (
+      'Brasil')
   end
   object btnNovo: TButton
     Left = 16
@@ -96,7 +103,6 @@ object cadastroEstado: TcadastroEstado
     Width = 82
     Height = 41
     Caption = 'Editar'
-    Enabled = False
     TabOrder = 6
   end
   object btnExcluir: TButton
@@ -105,7 +111,6 @@ object cadastroEstado: TcadastroEstado
     Width = 81
     Height = 41
     Caption = 'Excluir'
-    Enabled = False
     TabOrder = 7
   end
   object dbEstado: TDBGrid
@@ -113,11 +118,65 @@ object cadastroEstado: TcadastroEstado
     Top = 176
     Width = 320
     Height = 120
+    DataSource = DataModule1.DSEstado
     TabOrder = 8
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQEstado
+    ScopeMappings = <>
+    Left = 72
+    Top = 128
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 28
+    Top = 133
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'id'
+      Control = edtCodigo
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_nome'
+      Control = edtNome
+      Track = True
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_sigla'
+      Control = edtSigla
+      Track = True
+    end
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'cd_pais'
+      Control = cbPais
+      Track = True
+      FillDataSource = BindSourceDB2
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_nome'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModule1.FDQPais
+    ScopeMappings = <>
+    Left = 112
+    Top = 128
   end
 end
