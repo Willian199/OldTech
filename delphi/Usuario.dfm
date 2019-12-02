@@ -55,7 +55,7 @@ object cadastroUsuario: TcadastroUsuario
     Height = 21
     Enabled = False
     TabOrder = 0
-    Text = '2'
+    Text = '1'
   end
   object dbUsuario: TDBGrid
     Left = 40
@@ -108,7 +108,7 @@ object cadastroUsuario: TcadastroUsuario
     Height = 21
     Enabled = False
     TabOrder = 2
-    Text = 'admin'
+    Text = 'luiz'
   end
   object edtSenha: TEdit
     Left = 384
@@ -119,7 +119,7 @@ object cadastroUsuario: TcadastroUsuario
     Enabled = False
     PasswordChar = '*'
     TabOrder = 3
-    Text = 'admin'
+    Text = '1234'
   end
   object edtConfirmarSenha: TEdit
     Left = 384

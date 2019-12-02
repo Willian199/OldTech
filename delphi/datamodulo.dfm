@@ -20,6 +20,7 @@ object DataModule1: TDataModule1
     Top = 32
   end
   object FDQBairro: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from bairro')

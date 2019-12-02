@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Grids,
-  Vcl.DBGrids;
+  Vcl.DBGrids, System.Rtti, System.Bindings.Outputs, Vcl.Bind.Editors,
+  Data.Bind.EngExt, Vcl.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope;
 
 type
   TcadastroEndereco = class(TForm)
@@ -22,6 +23,16 @@ type
     btnSalvar: TButton;
     btnEditar: TButton;
     btnExcluir: TButton;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
+    LinkControlToField3: TLinkControlToField;
+    LinkFillControlToField1: TLinkFillControlToField;
+    BindSourceDB2: TBindSourceDB;
+    procedure FormShow(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
+    procedure limparCampos();
   private
     { Private declarations }
   public
@@ -34,5 +45,29 @@ var
 implementation
 
 {$R *.dfm}
+
+uses datamodulo;
+
+procedure TcadastroEndereco.btnNovoClick(Sender: TObject);
+begin
+  limparCampos();
+  edtRua.Enabled:=true;
+  edtNumero.Enabled:=true;
+  cbBairro.Enabled:=true;
+end;
+
+procedure TcadastroEndereco.FormShow(Sender: TObject);
+begin
+    DataModule1.FDConnection1.Connected:= True;
+    DataModule1.FDQEndereco.Active:= True;
+    DataModule1.FDQBairro.Active:= True;
+end;
+procedure TcadastroEndereco.limparCampos();
+begin
+    edtCodigo.Text:='';
+    edtRua.Text:='';
+    edtNumero.Text:='';
+    cbBairro.Text:='';
+end;
 
 end.
