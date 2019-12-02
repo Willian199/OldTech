@@ -3,16 +3,17 @@ object DataModule1: TDataModule1
   Height = 543
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
-    VendorHome = 'C:\Users\Gustavo\Desktop\museu\OldTech\delphi\Win32\Debug\dll'
+    VendorHome = 'C:\Users\Luiz Coppini\Desktop\OldTech\delphi\Win32\Debug\dll'
     Left = 32
     Top = 32
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=postgres'
+      'Database=dados-museu'
       'User_Name=postgres'
       'Password=postgres'
       'DriverID=PG')
+    Connected = True
     LoginPrompt = False
     Left = 104
     Top = 32
@@ -20,7 +21,7 @@ object DataModule1: TDataModule1
   object FDQBairro: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'select * from bairro')
+      'select * from bairro order by id asc')
     Left = 97
     Top = 104
     object FDQBairroid: TIntegerField
@@ -126,7 +127,7 @@ object DataModule1: TDataModule1
   object FDQCidade: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'select * from cidade')
+      'select * from cidade order by id asc')
     Left = 97
     Top = 160
     object FDQCidadeid: TIntegerField
@@ -145,6 +146,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQColecao: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from colecao')
@@ -173,7 +175,7 @@ object DataModule1: TDataModule1
   object FDQEndereco: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'select * from endereco')
+      'select * from endereco order by id asc')
     Left = 97
     Top = 272
     object FDQEnderecoid: TIntegerField
@@ -200,7 +202,7 @@ object DataModule1: TDataModule1
   object FDQEstado: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'select * from estado')
+      'select * from estado order by id asc')
     Left = 97
     Top = 328
     object FDQEstadoid: TIntegerField
@@ -225,6 +227,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQFabricante: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from Fabricante')
@@ -249,7 +252,7 @@ object DataModule1: TDataModule1
   object FDQPais: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'select * from pais')
+      'select * from pais order by id asc')
     Left = 251
     Top = 224
     object FDQPaisid: TIntegerField
@@ -264,6 +267,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQImagem: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from imagem')
@@ -409,6 +413,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQPessoa: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from pessoa order by id asc')
@@ -465,6 +470,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQSetor: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from setor')
@@ -497,6 +503,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQUsuario: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'Select count(*) from usuario')
@@ -510,6 +517,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQTipoPessoa: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from tipopessoa')
@@ -548,6 +556,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQUsuario2: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'Select * from usuario order by id asc')

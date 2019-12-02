@@ -3,19 +3,16 @@ object DataModule1: TDataModule1
   Height = 543
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
-    VendorHome = 
-      'C:\Users\lucas\Desktop\Projetos_Delphi\ProjetoMuseu\projetoMuseu' +
-      '\delphi\Win32\Debug\dll'
+    VendorHome = 'C:\Users\Gustavo\Desktop\museu\OldTech\delphi\Win32\Debug\dll'
     Left = 32
     Top = 32
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=dados-museu'
+      'Database=postgres'
       'User_Name=postgres'
       'Password=postgres'
       'DriverID=PG')
-    Connected = True
     LoginPrompt = False
     Left = 104
     Top = 32
@@ -553,7 +550,7 @@ object DataModule1: TDataModule1
   object FDQUsuario2: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'Select * from usuario')
+      'Select * from usuario order by id asc')
     Left = 379
     Top = 160
     object FDQUsuario2id: TIntegerField
@@ -565,10 +562,6 @@ object DataModule1: TDataModule1
       FieldName = 'tx_login'
       Origin = 'tx_login'
     end
-    object FDQUsuario2tx_senha: TWideStringField
-      FieldName = 'tx_senha'
-      Origin = 'tx_senha'
-    end
     object FDQUsuario2fl_ativo: TBooleanField
       FieldName = 'fl_ativo'
       Origin = 'fl_ativo'
@@ -576,6 +569,10 @@ object DataModule1: TDataModule1
     object FDQUsuario2cd_pessoa: TIntegerField
       FieldName = 'cd_pessoa'
       Origin = 'cd_pessoa'
+    end
+    object FDQUsuario2tx_senha: TWideStringField
+      FieldName = 'tx_senha'
+      Origin = 'tx_senha'
     end
   end
   object DSUsuario2: TDataSource
