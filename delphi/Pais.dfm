@@ -65,6 +65,7 @@ object cadastroPais: TcadastroPais
     Height = 41
     Caption = 'Novo'
     TabOrder = 3
+    OnClick = btnNovoClick
   end
   object btnSalvar: TButton
     Left = 127
@@ -74,6 +75,7 @@ object cadastroPais: TcadastroPais
     Caption = 'Salvar'
     Enabled = False
     TabOrder = 4
+    OnClick = btnSalvarClick
   end
   object btnEditar: TButton
     Left = 223
@@ -82,6 +84,7 @@ object cadastroPais: TcadastroPais
     Height = 41
     Caption = 'Editar'
     TabOrder = 5
+    OnClick = btnEditarClick
   end
   object btnExcluir: TButton
     Left = 327

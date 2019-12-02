@@ -1,6 +1,7 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
   Height = 543
+  VerticalOffset = 1
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
     VendorHome = 'C:\Users\Luiz Coppini\Desktop\OldTech\delphi\Win32\Debug\dll'
@@ -19,6 +20,7 @@ object DataModule1: TDataModule1
     Top = 32
   end
   object FDQBairro: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from bairro order by id asc')
@@ -125,6 +127,7 @@ object DataModule1: TDataModule1
     Top = 104
   end
   object FDQCidade: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cidade order by id asc')
@@ -173,6 +176,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQEndereco: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from endereco order by id asc')
@@ -200,6 +204,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQEstado: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from estado order by id asc')
@@ -250,6 +255,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQPais: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from pais order by id asc')
@@ -382,6 +388,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQMuseu: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from museu')

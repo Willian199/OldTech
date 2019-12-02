@@ -24,6 +24,9 @@ type
     LinkControlToField1: TLinkControlToField;
     LinkControlToField2: TLinkControlToField;
     procedure FormShow(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,6 +41,57 @@ implementation
 {$R *.dfm}
 
 uses datamodulo;
+
+procedure TcadastroPais.btnEditarClick(Sender: TObject);
+begin
+  edtPais.Enabled:=true;
+  edtPais.Enabled:=true;
+  btnNovo.Enabled:=false;
+  btnSalvar.Enabled:=true;
+  btnEditar.Enabled:=false;
+  btnExcluir.Enabled:=false;
+end;
+
+procedure TcadastroPais.btnNovoClick(Sender: TObject);
+begin
+  edtPais.Text:='';
+  edtCodigo.Text:='';
+  edtPais.Enabled:=true;
+  btnNovo.Enabled:=false;
+  btnSalvar.Enabled:=true;
+  btnEditar.Enabled:=false;
+  btnExcluir.Enabled:=false;
+end;
+
+procedure TcadastroPais.btnSalvarClick(Sender: TObject);
+begin
+  if(edtPais.Text='') then
+  begin
+    ShowMessage('O campo País precisa ser preenchido!');
+    edtPais.SetFocus;
+  end
+  else
+  begin
+    if(edtCodigo.Text='') then
+    begin
+    DataModule1.FDQPais.Post;
+    DataModule1.FDQPais.Refresh;
+    ShowMessage('Dados salvos');
+    end
+    else
+    begin
+    DataModule1.FDQPais.Edit;
+    DataModule1.FDQPais.Refresh;
+    ShowMessage('Dados salvos');
+    end;
+    btnNovo.Enabled:=true;
+    btnSalvar.Enabled:=false;
+    btnEditar.Enabled:=true;
+    btnExcluir.Enabled:=true;
+    edtCodigo.Enabled:=false;
+    edtPais.Enabled:=false;
+  end;
+end;
 
 procedure TcadastroPais.FormShow(Sender: TObject);
 begin
