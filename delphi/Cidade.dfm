@@ -41,6 +41,7 @@ object cadastroCidade: TcadastroCidade
     Height = 21
     Enabled = False
     TabOrder = 0
+    Text = '1'
   end
   object edtNome: TEdit
     Left = 64
@@ -49,6 +50,7 @@ object cadastroCidade: TcadastroCidade
     Height = 21
     Enabled = False
     TabOrder = 1
+    Text = 'S'#227'o Miguel do Oeste'
   end
   object cbEstado: TComboBox
     Left = 256
@@ -56,13 +58,20 @@ object cadastroCidade: TcadastroCidade
     Width = 145
     Height = 21
     Enabled = False
+    ItemIndex = 0
     TabOrder = 2
+    Text = 'Santa Catarina'
+    Items.Strings = (
+      'Santa Catarina'
+      'Rio Grande do Sul'
+      'Paran'#225)
   end
   object dbCidade: TDBGrid
     Left = 56
     Top = 160
     Width = 320
     Height = 120
+    DataSource = DataModule1.DSCidade
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -93,7 +102,6 @@ object cadastroCidade: TcadastroCidade
     Width = 82
     Height = 41
     Caption = 'Editar'
-    Enabled = False
     TabOrder = 6
   end
   object btnExcluir: TButton
@@ -102,7 +110,52 @@ object cadastroCidade: TcadastroCidade
     Width = 81
     Height = 41
     Caption = 'Excluir'
-    Enabled = False
     TabOrder = 7
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQCidade
+    ScopeMappings = <>
+    Left = 328
+    Top = 88
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 292
+    Top = 85
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'id'
+      Control = edtCodigo
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_nome'
+      Control = edtNome
+      Track = True
+    end
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'cd_estado'
+      Control = cbEstado
+      Track = True
+      FillDataSource = BindSourceDB2
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_nome'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModule1.FDQEstado
+    ScopeMappings = <>
+    Left = 384
+    Top = 88
   end
 end
