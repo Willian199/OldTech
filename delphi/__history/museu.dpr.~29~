@@ -1,0 +1,38 @@
+program museu;
+
+uses
+  Vcl.Forms,
+  login in 'login.pas' {Form1},
+  datamodulo in 'datamodulo.pas' {DataModule1: TDataModule},
+  home in 'home.pas' {Principal},
+  ListaItem in 'ListaItem.pas' {Item},
+  Usuario in 'Usuario.pas' {cadastroUsuario},
+  Pessoa in 'Pessoa.pas' {administrarPessoa},
+  frmFabricante in 'frmFabricante.pas' {nFabricante},
+  Material in 'Material.pas' {nomeMaterial},
+  Colecao in 'Colecao.pas' {frmColecao},
+  frmPeca in 'frmPeca.pas' {nPeca},
+  Pais in 'Pais.pas' {Form2},
+  Estado in 'Estado.pas' {Form3},
+  Cidade in 'Cidade.pas' {Form4};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TPrincipal, Principal);
+  Application.CreateForm(TadministrarPessoa, administrarPessoa);
+  Application.CreateForm(TnFabricante, nFabricante);
+  Application.CreateForm(TnomeMaterial, nomeMaterial);
+  Application.CreateForm(TfrmColecao, frmColecao);
+  Application.CreateForm(TnPeca, nPeca);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
+  //teForm(TCadastroItem, CadastroItem);
+  Application.CreateForm(TcadastroUsuario, cadastroUsuario);
+  Application.Run;
+end.

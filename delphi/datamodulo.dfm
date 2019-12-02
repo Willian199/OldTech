@@ -1,23 +1,26 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
   Height = 543
+  VerticalOffset = 2
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
-    VendorHome = 'C:\Users\Gustavo\Desktop\museu\OldTech\delphi\Win32\Debug\dll'
+    VendorHome = 'C:\Users\Luiz Coppini\Desktop\OldTech\delphi\Win32\Debug\dll'
     Left = 32
     Top = 32
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Database=postgres'
+      'Database=dados-museu'
       'User_Name=postgres'
       'Password=postgres'
       'DriverID=PG')
+    Connected = True
     LoginPrompt = False
     Left = 104
     Top = 32
   end
   object FDQBairro: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from bairro')
@@ -124,6 +127,7 @@ object DataModule1: TDataModule1
     Top = 104
   end
   object FDQCidade: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cidade')
@@ -171,6 +175,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQEndereco: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from endereco')
@@ -198,6 +203,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQEstado: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from estado')
@@ -247,6 +253,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQPais: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from pais')
@@ -409,6 +416,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQPessoa: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from pessoa order by id asc')
@@ -497,6 +505,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQUsuario: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'Select count(*) from usuario')
@@ -510,6 +519,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQTipoPessoa: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from tipopessoa')
@@ -548,9 +558,10 @@ object DataModule1: TDataModule1
     end
   end
   object FDQUsuario2: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
-      'Select * from usuario')
+      'Select * from usuario order by id asc')
     Left = 379
     Top = 160
     object FDQUsuario2id: TIntegerField
@@ -562,10 +573,6 @@ object DataModule1: TDataModule1
       FieldName = 'tx_login'
       Origin = 'tx_login'
     end
-    object FDQUsuario2tx_senha: TWideStringField
-      FieldName = 'tx_senha'
-      Origin = 'tx_senha'
-    end
     object FDQUsuario2fl_ativo: TBooleanField
       FieldName = 'fl_ativo'
       Origin = 'fl_ativo'
@@ -573,6 +580,10 @@ object DataModule1: TDataModule1
     object FDQUsuario2cd_pessoa: TIntegerField
       FieldName = 'cd_pessoa'
       Origin = 'cd_pessoa'
+    end
+    object FDQUsuario2tx_senha: TWideStringField
+      FieldName = 'tx_senha'
+      Origin = 'tx_senha'
     end
   end
   object DSUsuario2: TDataSource

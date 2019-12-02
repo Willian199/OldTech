@@ -91,7 +91,8 @@ Coordinates=1018,1,141,105
 Coordinates=304,705,147,141
 
 [DataModule1.FDQColecao]
-Coordinates=630,107,143,123
+Coordinates=630,107,143,33
+Visible=False
 
 [DataModule1.DSEndereco]
 Coordinates=824,797,142,33
@@ -131,4 +132,19 @@ Coordinates=453,605,116,159
 
 [BindingsList1]
 Coordinates=270,186,82,33
+
+[btnEditar]
+Coordinates=0,869,59,51
+
+[btnSalvar]
+Coordinates=65,920,61,51
+
+[btnNovo]
+Coordinates=83,1,56,51
+
+[btnExcluir]
+Coordinates=755,920,64,51
+
+[BindSourceDB2]
+Coordinates=630,107,129,141
 

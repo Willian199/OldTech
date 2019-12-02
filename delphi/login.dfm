@@ -1550,11 +1550,11 @@ object Form1: TForm1
     ParentFont = False
   end
   object lblTitulo: TLabel
-    Left = 264
+    Left = 248
     Top = 64
-    Width = 86
+    Width = 119
     Height = 30
-    Caption = 'MUSEU'
+    Caption = 'OLD TECH'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -21
@@ -1565,9 +1565,9 @@ object Form1: TForm1
   object lblqtd: TLabel
     Left = 456
     Top = 32
-    Width = 32
+    Width = 7
     Height = 14
-    Caption = 'count'
+    Caption = '5'
     Visible = False
   end
   object edtLogin: TEdit

@@ -10,7 +10,13 @@ uses
   Pessoa in 'Pessoa.pas' {administrarPessoa},
   frmFabricante in 'frmFabricante.pas' {nFabricante},
   Material in 'Material.pas' {nomeMaterial},
-  Colecao in 'Colecao.pas' {frmColecao};
+  Colecao in 'Colecao.pas' {frmColecao},
+  frmPeca in 'frmPeca.pas' {nPeca},
+  Pais in 'Pais.pas' {cadastroPais},
+  Estado in 'Estado.pas' {cadastroEstado},
+  Cidade in 'Cidade.pas' {cadastroCidade},
+  Bairro in 'Bairro.pas' {cadastroBairro},
+  Endereco in 'Endereco.pas' {cadastroEndereco};
 
 {$R *.res}
 
@@ -24,7 +30,13 @@ begin
   Application.CreateForm(TnFabricante, nFabricante);
   Application.CreateForm(TnomeMaterial, nomeMaterial);
   Application.CreateForm(TfrmColecao, frmColecao);
-  //eateForm(TCadastroItem, CadastroItem);
+  Application.CreateForm(TnPeca, nPeca);
+  Application.CreateForm(TcadastroPais, cadastroPais);
+  Application.CreateForm(TcadastroEstado, cadastroEstado);
+  Application.CreateForm(TcadastroCidade, cadastroCidade);
+  Application.CreateForm(TcadastroBairro, cadastroBairro);
+  Application.CreateForm(TcadastroEndereco, cadastroEndereco);
+  //teForm(TCadastroItem, CadastroItem);
   Application.CreateForm(TcadastroUsuario, cadastroUsuario);
   Application.Run;
 end.
