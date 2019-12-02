@@ -44,6 +44,7 @@ type
     procedure BairroClick(Sender: TObject);
     procedure EnderecoSubMenuClick(Sender: TObject);
     procedure SobreClick(Sender: TObject);
+    procedure SairClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -112,6 +113,11 @@ procedure TPrincipal.PecaClick(Sender: TObject);
 begin
   nPeca:= TNPeca.Create(Self);
   nPeca.ShowModal;
+end;
+
+procedure TPrincipal.SairClick(Sender: TObject);
+begin
+  Application.Terminate;
 end;
 
 procedure TPrincipal.SobreClick(Sender: TObject);

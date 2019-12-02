@@ -148,9 +148,11 @@ Coordinates=758,231,134,33
 
 [DataModule1.FDQCidade]
 Coordinates=10,510,137,105
+Visible=False
 
 [DataModule1.FDQBairro]
 Coordinates=354,510,133,105
+Visible=False
 
 [administrarPessoa.BindSourceDB2]
 Coordinates=157,510,187,105

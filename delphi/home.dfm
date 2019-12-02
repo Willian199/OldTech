@@ -829,8 +829,8 @@ object Principal: TPrincipal
     Stretch = True
   end
   object MainMenu1: TMainMenu
-    Left = 744
-    Top = 472
+    Left = 504
+    Top = 352
     object Cadastro: TMenuItem
       Caption = 'Cadastro'
       object Item: TMenuItem
@@ -905,6 +905,7 @@ object Principal: TPrincipal
     end
     object Sair: TMenuItem
       Caption = 'Sair'
+      OnClick = SairClick
     end
   end
 end
