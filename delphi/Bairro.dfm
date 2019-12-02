@@ -41,6 +41,7 @@ object cadastroBairro: TcadastroBairro
     Height = 21
     Enabled = False
     TabOrder = 0
+    Text = '1'
   end
   object edtNome: TEdit
     Left = 64
@@ -49,6 +50,7 @@ object cadastroBairro: TcadastroBairro
     Height = 21
     Enabled = False
     TabOrder = 1
+    Text = 'Centro'
   end
   object cbCidade: TComboBox
     Left = 256
@@ -56,13 +58,22 @@ object cadastroBairro: TcadastroBairro
     Width = 145
     Height = 21
     Enabled = False
+    ItemIndex = 0
     TabOrder = 2
+    Text = 'S'#227'o Miguel do Oeste'
+    Items.Strings = (
+      'S'#227'o Miguel do Oeste'
+      'Descanso'
+      'Porto Alegre'
+      'Curitiba'
+      'Florian'#243'polis')
   end
   object DBGrid1: TDBGrid
     Left = 40
     Top = 184
     Width = 337
     Height = 120
+    DataSource = DataModule1.DSBairro
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -93,7 +104,6 @@ object cadastroBairro: TcadastroBairro
     Width = 82
     Height = 41
     Caption = 'Editar'
-    Enabled = False
     TabOrder = 6
   end
   object btnExcluir: TButton
@@ -102,7 +112,52 @@ object cadastroBairro: TcadastroBairro
     Width = 81
     Height = 41
     Caption = 'Excluir'
-    Enabled = False
     TabOrder = 7
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQBairro
+    ScopeMappings = <>
+    Left = 384
+    Top = 96
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 276
+    Top = 101
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'id'
+      Control = edtCodigo
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_nome'
+      Control = edtNome
+      Track = True
+    end
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'cd_cidade'
+      Control = cbCidade
+      Track = True
+      FillDataSource = BindSourceDB2
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_nome'
+      AutoFill = True
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModule1.FDQCidade
+    ScopeMappings = <>
+    Left = 336
+    Top = 96
   end
 end

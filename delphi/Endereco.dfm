@@ -2,8 +2,8 @@ object cadastroEndereco: TcadastroEndereco
   Left = 0
   Top = 0
   Caption = 'Endereco'
-  ClientHeight = 384
-  ClientWidth = 421
+  ClientHeight = 520
+  ClientWidth = 509
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -40,6 +40,13 @@ object cadastroEndereco: TcadastroEndereco
     Width = 41
     Height = 13
     Caption = 'Numero:'
+  end
+  object lblCidade: TLabel
+    Left = 233
+    Top = 5
+    Width = 37
+    Height = 13
+    Caption = 'Cidade:'
   end
   object edtCodigo: TEdit
     Left = 59
@@ -129,17 +136,25 @@ object cadastroEndereco: TcadastroEndereco
     Caption = 'Excluir'
     TabOrder = 8
   end
+  object cbCidade: TComboBox
+    Left = 320
+    Top = 2
+    Width = 145
+    Height = 21
+    TabOrder = 9
+    Text = 'Centro'
+  end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule1.FDQEndereco
     ScopeMappings = <>
-    Left = 168
-    Top = 65520
+    Left = 120
+    Top = 416
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 84
-    Top = 65517
+    Left = 20
+    Top = 421
     object LinkControlToField1: TLinkControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
@@ -175,11 +190,31 @@ object cadastroEndereco: TcadastroEndereco
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end
+    object LinkFillControlToField2: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'cd_cidade'
+      Control = cbCidade
+      Track = True
+      FillDataSource = BindSourceDB3
+      FillValueFieldName = 'id'
+      FillDisplayFieldName = 'tx_nome'
+      AutoFill = False
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
   end
   object BindSourceDB2: TBindSourceDB
     DataSet = DataModule1.FDQBairro
     ScopeMappings = <>
-    Left = 120
-    Top = 65520
+    Left = 64
+    Top = 416
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = DataModule1.FDQCidade
+    ScopeMappings = <>
+    Left = 176
+    Top = 416
   end
 end

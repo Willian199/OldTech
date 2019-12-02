@@ -30,6 +30,10 @@ type
     LinkControlToField3: TLinkControlToField;
     LinkFillControlToField1: TLinkFillControlToField;
     BindSourceDB2: TBindSourceDB;
+    cbCidade: TComboBox;
+    lblCidade: TLabel;
+    BindSourceDB3: TBindSourceDB;
+    LinkFillControlToField2: TLinkFillControlToField;
     procedure FormShow(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
     procedure limparCampos();

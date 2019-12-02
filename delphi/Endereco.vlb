@@ -61,7 +61,8 @@ Coordinates=698,1,156,33
 Coordinates=899,707,133,33
 
 [DataModule1.FDQCidade]
-Coordinates=163,359,137,105
+Coordinates=760,560,137,33
+Visible=False
 
 [DataModule1.FDQTipoPessoa]
 Coordinates=183,492,160,87
@@ -158,4 +159,13 @@ Coordinates=403,294,82,33
 
 [BindSourceDB2]
 Coordinates=1150,410,119,123
+
+[lblCidade]
+Coordinates=403,373,60,51
+
+[cbCidade]
+Coordinates=960,560,84,105
+
+[BindSourceDB3]
+Coordinates=770,550,124,123
 
