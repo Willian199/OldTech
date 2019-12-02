@@ -34,6 +34,7 @@ object cadastroPais: TcadastroPais
     Height = 21
     Enabled = False
     TabOrder = 0
+    Text = '1'
   end
   object edtPais: TEdit
     Left = 223
@@ -42,12 +43,14 @@ object cadastroPais: TcadastroPais
     Height = 21
     Enabled = False
     TabOrder = 1
+    Text = 'Brasil'
   end
   object dbPais: TDBGrid
     Left = 56
     Top = 104
     Width = 320
     Height = 120
+    DataSource = DataModule1.DSPais
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -78,7 +81,6 @@ object cadastroPais: TcadastroPais
     Width = 82
     Height = 41
     Caption = 'Editar'
-    Enabled = False
     TabOrder = 5
   end
   object btnExcluir: TButton
@@ -87,7 +89,31 @@ object cadastroPais: TcadastroPais
     Width = 81
     Height = 41
     Caption = 'Excluir'
-    Enabled = False
     TabOrder = 6
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQPais
+    ScopeMappings = <>
+    Left = 72
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'tx_nome'
+      Control = edtPais
+      Track = True
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'id'
+      Control = edtCodigo
+      Track = True
+    end
   end
 end
