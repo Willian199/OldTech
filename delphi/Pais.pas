@@ -27,6 +27,7 @@ type
     procedure btnNovoClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,15 +53,23 @@ begin
   btnExcluir.Enabled:=false;
 end;
 
+procedure TcadastroPais.btnExcluirClick(Sender: TObject);
+begin
+DataModule1.FDQPais.Delete;
+end;
+
 procedure TcadastroPais.btnNovoClick(Sender: TObject);
 begin
   edtPais.Text:='';
   edtCodigo.Text:='';
+  edtCodigo.Enabled:=false;
+  edtCodigo.ReadOnly:=true;
   edtPais.Enabled:=true;
   btnNovo.Enabled:=false;
   btnSalvar.Enabled:=true;
   btnEditar.Enabled:=false;
   btnExcluir.Enabled:=false;
+  dbPais.Enabled:=false;
 end;
 
 procedure TcadastroPais.btnSalvarClick(Sender: TObject);
@@ -90,6 +99,7 @@ begin
     btnExcluir.Enabled:=true;
     edtCodigo.Enabled:=false;
     edtPais.Enabled:=false;
+    dbPais.Enabled:=true;
   end;
 end;
 

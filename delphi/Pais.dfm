@@ -33,6 +33,7 @@ object cadastroPais: TcadastroPais
     Width = 73
     Height = 21
     Enabled = False
+    NumbersOnly = True
     TabOrder = 0
     Text = '1'
   end
@@ -51,6 +52,7 @@ object cadastroPais: TcadastroPais
     Width = 320
     Height = 120
     DataSource = DataModule1.DSPais
+    ReadOnly = True
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -93,6 +95,7 @@ object cadastroPais: TcadastroPais
     Height = 41
     Caption = 'Excluir'
     TabOrder = 6
+    OnClick = btnExcluirClick
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = DataModule1.FDQPais

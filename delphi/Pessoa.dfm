@@ -61,7 +61,9 @@ object administrarPessoa: TadministrarPessoa
     Width = 65
     Height = 21
     Enabled = False
+    NumbersOnly = True
     TabOrder = 0
+    Text = '1'
   end
   object edtNome: TEdit
     Left = 96
@@ -70,6 +72,7 @@ object administrarPessoa: TadministrarPessoa
     Height = 21
     Enabled = False
     TabOrder = 1
+    Text = 'Luiz Fernando Coppini de Lima'
   end
   object edtCpf: TMaskEdit
     Left = 96
@@ -80,13 +83,15 @@ object administrarPessoa: TadministrarPessoa
     EditMask = '!999-999-999-99;1;_'
     MaxLength = 14
     TabOrder = 2
-    Text = '   -   -   -  '
+    Text = '040-   -   -  '
   end
   object dtpNascimento: TDateTimePicker
     Left = 491
     Top = 80
     Width = 108
     Height = 21
+    Date = 31189.000000000000000000
+    Time = 31189.000000000000000000
     Enabled = False
     TabOrder = 3
   end
@@ -109,12 +114,14 @@ object administrarPessoa: TadministrarPessoa
     Enabled = False
     ItemIndex = 0
     TabOrder = 5
-    Text = 'Funcionario'
+    Text = 'Gerente'
     Items.Strings = (
-      'Funcionario'
       'Gerente'
+      'Funcion'#225'rio'
       'Visitante'
-      'Cuidador')
+      'Curador'
+      'Convidado'
+      'Outro')
   end
   object cbComplemento: TComboBox
     Left = 454
@@ -129,8 +136,7 @@ object administrarPessoa: TadministrarPessoa
       '1'
       '2'
       '3'
-      '4'
-      '5')
+      '4')
   end
   object dbPessoa: TDBGrid
     Left = 44

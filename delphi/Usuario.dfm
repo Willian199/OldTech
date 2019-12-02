@@ -54,6 +54,7 @@ object cadastroUsuario: TcadastroUsuario
     Width = 65
     Height = 21
     Enabled = False
+    NumbersOnly = True
     TabOrder = 0
     Text = '1'
   end
@@ -184,7 +185,6 @@ object cadastroUsuario: TcadastroUsuario
     Width = 82
     Height = 41
     Caption = 'Editar'
-    Enabled = False
     TabOrder = 9
     OnClick = btnEditarClick
   end
@@ -194,7 +194,6 @@ object cadastroUsuario: TcadastroUsuario
     Width = 81
     Height = 41
     Caption = 'Excluir'
-    Enabled = False
     TabOrder = 10
     OnClick = btnExcluirClick
   end
