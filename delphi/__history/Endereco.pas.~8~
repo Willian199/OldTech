@@ -34,10 +34,6 @@ type
     lblCidade: TLabel;
     BindSourceDB3: TBindSourceDB;
     LinkFillControlToField2: TLinkFillControlToField;
-    cbEstado: TComboBox;
-    cbPaís: TComboBox;
-    lblPais: TLabel;
-    lblEstado: TLabel;
     procedure FormShow(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
     procedure limparCampos();
