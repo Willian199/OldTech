@@ -1,7 +1,6 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
   Height = 543
-  VerticalOffset = 1
   Width = 770
   object FDPhysPgDriverLink1: TFDPhysPgDriverLink
     VendorHome = 'C:\Users\Luiz Coppini\Desktop\OldTech\delphi\Win32\Debug\dll'
@@ -20,7 +19,6 @@ object DataModule1: TDataModule1
     Top = 32
   end
   object FDQBairro: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from bairro order by id asc')
@@ -127,7 +125,6 @@ object DataModule1: TDataModule1
     Top = 104
   end
   object FDQCidade: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cidade order by id asc')
@@ -149,7 +146,6 @@ object DataModule1: TDataModule1
     end
   end
   object FDQColecao: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from colecao')
@@ -176,7 +172,6 @@ object DataModule1: TDataModule1
     end
   end
   object FDQEndereco: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from endereco order by id asc')
@@ -204,7 +199,6 @@ object DataModule1: TDataModule1
     end
   end
   object FDQEstado: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from estado order by id asc')
@@ -232,7 +226,6 @@ object DataModule1: TDataModule1
     end
   end
   object FDQFabricante: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from Fabricante')
@@ -273,7 +266,6 @@ object DataModule1: TDataModule1
     end
   end
   object FDQImagem: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from imagem')
@@ -319,17 +311,9 @@ object DataModule1: TDataModule1
       Origin = 'tx_descricao'
       Size = 255
     end
-    object FDQItemdt_construido: TDateField
-      FieldName = 'dt_construido'
-      Origin = 'dt_construido'
-    end
     object FDQItemtp_exposicao: TSQLTimeStampField
       FieldName = 'tp_exposicao'
       Origin = 'tp_exposicao'
-    end
-    object FDQItemtp_manutencao: TSQLTimeStampField
-      FieldName = 'tp_manutencao'
-      Origin = 'tp_manutencao'
     end
     object FDQItemdt_fabricacao: TDateField
       FieldName = 'dt_fabricacao'
@@ -340,10 +324,6 @@ object DataModule1: TDataModule1
       Origin = 'vl_valor'
       Precision = 19
       Size = 3
-    end
-    object FDQItemfl_exibicao: TBooleanField
-      FieldName = 'fl_exibicao'
-      Origin = 'fl_exibicao'
     end
     object FDQItemcd_responsavel: TIntegerField
       FieldName = 'cd_responsavel'
@@ -371,6 +351,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQItemColecao: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from item_colecao')
@@ -460,6 +441,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQTipoMaterial: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from tipomaterial')
@@ -542,6 +524,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDQVideo: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from video')

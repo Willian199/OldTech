@@ -35,13 +35,6 @@ object nPeca: TnPeca
     Height = 13
     Caption = 'Descri'#231#227'o'
   end
-  object Label4: TLabel
-    Left = 8
-    Top = 136
-    Width = 81
-    Height = 13
-    Caption = 'Data Constru'#231#227'o'
-  end
   object Label5: TLabel
     Left = 536
     Top = 24
@@ -55,13 +48,6 @@ object nPeca: TnPeca
     Width = 83
     Height = 13
     Caption = 'Tempo Exposi'#231#227'o'
-  end
-  object Label7: TLabel
-    Left = 375
-    Top = 24
-    Width = 94
-    Height = 13
-    Caption = 'Tempo Manuten'#231#227'o'
   end
   object Label8: TLabel
     Left = 244
@@ -112,22 +98,13 @@ object nPeca: TnPeca
     Height = 13
     Caption = 'Dono'
   end
-  object chExibicao: TCheckBox
-    Left = 403
-    Top = 95
-    Width = 82
-    Height = 17
-    Caption = 'Em Exibi'#231#227'o'
-    Enabled = False
-    TabOrder = 0
-  end
   object edtNome: TEdit
     Left = 72
     Top = 21
     Width = 105
     Height = 21
     Enabled = False
-    TabOrder = 1
+    TabOrder = 0
   end
   object edtOrigem: TEdit
     Left = 72
@@ -135,7 +112,7 @@ object nPeca: TnPeca
     Width = 105
     Height = 21
     Enabled = False
-    TabOrder = 2
+    TabOrder = 1
   end
   object edtDescricao: TEdit
     Left = 72
@@ -143,15 +120,15 @@ object nPeca: TnPeca
     Width = 105
     Height = 21
     Enabled = False
-    TabOrder = 3
+    TabOrder = 2
   end
   object edtValor: TEdit
     Left = 286
     Top = 93
     Width = 105
-    Height = 26
+    Height = 21
     Enabled = False
-    TabOrder = 4
+    TabOrder = 3
   end
   object dtExposicao: TDateTimePicker
     Left = 230
@@ -161,17 +138,7 @@ object nPeca: TnPeca
     Date = 43800.000000000000000000
     Time = 0.723825787034002100
     Enabled = False
-    TabOrder = 5
-  end
-  object dtManutencao: TDateTimePicker
-    Left = 375
-    Top = 43
-    Width = 110
-    Height = 21
-    Date = 43800.000000000000000000
-    Time = 0.723825787034002100
-    Enabled = False
-    TabOrder = 6
+    TabOrder = 4
   end
   object dtFabricacao: TDateTimePicker
     Left = 536
@@ -181,17 +148,7 @@ object nPeca: TnPeca
     Date = 43800.000000000000000000
     Time = 0.723825787034002100
     Enabled = False
-    TabOrder = 7
-  end
-  object dtConstrucao: TDateTimePicker
-    Left = 95
-    Top = 133
-    Width = 110
-    Height = 21
-    Date = 43800.000000000000000000
-    Time = 0.723825787034002100
-    Enabled = False
-    TabOrder = 8
+    TabOrder = 5
   end
   object cbDono: TComboBox
     Left = 88
@@ -199,7 +156,11 @@ object nPeca: TnPeca
     Width = 117
     Height = 21
     Enabled = False
-    TabOrder = 9
+    TabOrder = 6
+    Items.Strings = (
+      'Luiz '
+      'Gustavo'
+      'Willian')
   end
   object cbMaterial: TComboBox
     Left = 286
@@ -207,7 +168,7 @@ object nPeca: TnPeca
     Width = 105
     Height = 21
     Enabled = False
-    TabOrder = 10
+    TabOrder = 7
   end
   object cbFabricante: TComboBox
     Left = 557
@@ -215,7 +176,7 @@ object nPeca: TnPeca
     Width = 89
     Height = 21
     Enabled = False
-    TabOrder = 11
+    TabOrder = 8
   end
   object cbPais: TComboBox
     Left = 286
@@ -223,7 +184,10 @@ object nPeca: TnPeca
     Width = 105
     Height = 21
     Enabled = False
-    TabOrder = 12
+    TabOrder = 9
+    Items.Strings = (
+      'Brasil'
+      'Argentina')
   end
   object cbResponsavel: TComboBox
     Left = 557
@@ -231,7 +195,11 @@ object nPeca: TnPeca
     Width = 89
     Height = 21
     Enabled = False
-    TabOrder = 13
+    TabOrder = 10
+    Items.Strings = (
+      'Luiz '
+      'Gustavo'
+      'Willian')
   end
   object cbSetor: TComboBox
     Left = 557
@@ -239,7 +207,7 @@ object nPeca: TnPeca
     Width = 82
     Height = 21
     Enabled = False
-    TabOrder = 14
+    TabOrder = 11
   end
   object btnNovo: TButton
     Left = 64
@@ -247,7 +215,7 @@ object nPeca: TnPeca
     Width = 75
     Height = 25
     Caption = 'Novo'
-    TabOrder = 15
+    TabOrder = 12
     OnClick = btnNovoClick
   end
   object btnSalvar: TButton
@@ -256,7 +224,7 @@ object nPeca: TnPeca
     Width = 75
     Height = 25
     Caption = 'Salvar'
-    TabOrder = 16
+    TabOrder = 13
     OnClick = btnSalvarClick
   end
   object btnEditar: TButton
@@ -265,7 +233,7 @@ object nPeca: TnPeca
     Width = 75
     Height = 25
     Caption = 'Editar'
-    TabOrder = 17
+    TabOrder = 14
     OnClick = btnEditarClick
   end
   object btnExcluir: TButton
@@ -274,7 +242,7 @@ object nPeca: TnPeca
     Width = 75
     Height = 25
     Caption = 'Excluir'
-    TabOrder = 18
+    TabOrder = 15
     OnClick = btnExcluirClick
   end
   object gridItem: TDBGrid
@@ -283,7 +251,7 @@ object nPeca: TnPeca
     Width = 413
     Height = 56
     DataSource = DataModule1.DSItem
-    TabOrder = 19
+    TabOrder = 16
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -434,13 +402,6 @@ object nPeca: TnPeca
       Control = edtDescricao
       Track = True
     end
-    object LinkControlToField4: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB6
-      FieldName = 'dt_construido'
-      Control = dtConstrucao
-      Track = True
-    end
     object LinkControlToField5: TLinkControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB6
@@ -448,25 +409,11 @@ object nPeca: TnPeca
       Control = dtFabricacao
       Track = True
     end
-    object LinkControlToField6: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB6
-      FieldName = 'fl_exibicao'
-      Control = chExibicao
-      Track = True
-    end
     object LinkControlToField7: TLinkControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB6
       FieldName = 'vl_valor'
       Control = edtValor
-      Track = True
-    end
-    object LinkControlToField8: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB6
-      FieldName = 'tp_manutencao'
-      Control = dtManutencao
       Track = True
     end
     object LinkControlToField9: TLinkControlToField

@@ -76,12 +76,9 @@ type
     FDQItemtx_nome: TWideStringField;
     FDQItemtx_origem: TWideStringField;
     FDQItemtx_descricao: TWideStringField;
-    FDQItemdt_construido: TDateField;
     FDQItemtp_exposicao: TSQLTimeStampField;
-    FDQItemtp_manutencao: TSQLTimeStampField;
     FDQItemdt_fabricacao: TDateField;
     FDQItemvl_valor: TFMTBCDField;
-    FDQItemfl_exibicao: TBooleanField;
     FDQItemcd_responsavel: TIntegerField;
     FDQItemcd_pais: TIntegerField;
     FDQItemcd_setor: TIntegerField;

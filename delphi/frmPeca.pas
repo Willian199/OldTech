@@ -14,12 +14,9 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
-    Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
-    Label7: TLabel;
     Label8: TLabel;
-    chExibicao: TCheckBox;
     Label9: TLabel;
     Label10: TLabel;
     Label11: TLabel;
@@ -31,9 +28,7 @@ type
     edtDescricao: TEdit;
     edtValor: TEdit;
     dtExposicao: TDateTimePicker;
-    dtManutencao: TDateTimePicker;
     dtFabricacao: TDateTimePicker;
-    dtConstrucao: TDateTimePicker;
     cbDono: TComboBox;
     cbMaterial: TComboBox;
     cbFabricante: TComboBox;
@@ -60,11 +55,8 @@ type
     LinkControlToField1: TLinkControlToField;
     LinkControlToField2: TLinkControlToField;
     LinkControlToField3: TLinkControlToField;
-    LinkControlToField4: TLinkControlToField;
     LinkControlToField5: TLinkControlToField;
-    LinkControlToField6: TLinkControlToField;
     LinkControlToField7: TLinkControlToField;
-    LinkControlToField8: TLinkControlToField;
     LinkControlToField9: TLinkControlToField;
     gridItem: TDBGrid;
     procedure FormShow(Sender: TObject);
@@ -113,16 +105,16 @@ begin
  edtDescricao.Enabled:= true;
  edtValor.Enabled:= true;
  dtExposicao.Enabled:= true;
- dtManutencao.Enabled:= true;
+
  dtFabricacao.Enabled:= true;
- dtConstrucao.Enabled:= true;
+
  cbDono.Enabled:= true;
  cbMaterial.Enabled:= true;
  cbFabricante.Enabled:= true;
  cbPais.Enabled:=true;
  cbResponsavel.Enabled:=true;
  cbSetor.Enabled:=true;
- chExibicao.Enabled:= true;
+
  edtNome.SetFocus;
 
 end;

@@ -4,9 +4,6 @@ Coordinates=614,1,113,33
 [DSPessoa]
 Coordinates=214,107,64,33
 
-[FDQItemtp_manutencao]
-Coordinates=614,53,133,33
-
 [FDQColecaotx_descricao]
 Coordinates=614,105,139,33
 
@@ -81,9 +78,6 @@ Coordinates=614,833,118,33
 
 [FDQCidadeid]
 Coordinates=614,885,79,33
-
-[FDQItemfl_exibicao]
-Coordinates=614,937,110,33
 
 [FDQItem]
 Coordinates=10,10,78,339
@@ -277,9 +271,6 @@ Coordinates=986,209,120,33
 [DSTipoMaterial]
 Coordinates=214,303,89,33
 
-[FDQItemdt_construido]
-Coordinates=986,261,125,33
-
 [FDQCidadetx_nome]
 Coordinates=986,313,112,33
 
@@ -311,5 +302,5 @@ Coordinates=986,677,132,33
 Coordinates=791,10,70,105
 
 []
-Coordinates=986,469,127,33
+Coordinates=614,937,110,33
 
